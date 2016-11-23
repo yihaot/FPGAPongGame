@@ -98,7 +98,7 @@ module labkit(
 	debounce  db_up(.reset(reset), .clock(pixel_clk), .noisy(btn_up), .clean(up));			 
 	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_down), .clean(down));
 	debounce  db_left(.reset(reset), .clock(pixel_clk), .noisy(btn_left), .clean(left));			 
-	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_right), .clean(right));    
+	debounce  db_right(.reset(reset), .clock(pixel_clk), .noisy(btn_right), .clean(right));    
 	debounce  db_enter(.reset(1'b0), .clock(pixel_clk), .noisy(btn_enter), .clean(enter)); 
 	
    assign reset = enter;
@@ -321,8 +321,20 @@ module pong_game (
 				(ball_y<paddle_yB+PADDLE_HEIGHT);
 
    //assign stop = ball_x + 1 < PADDLE_X + PADDLE_WIDTH; //this is the code that determines when the game "loses", checks when ball is out of left boundary
-   assign stop = ((ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) || (ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) ; //this is the code that determines when the game "loses", checks when ball is out of right boundary
+   //assign stop = ((ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) || (ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) ; //this is the code that determines when the game "loses", checks when ball is out of right boundary
+	reg [9:0] scoreA = 0;  
+	reg [9:0] scoreB = 0;  //initialises the score 
 
+
+   if ((ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) begin //A loses
+   scoreB <= scoreB + 1;
+   assign stop = 1;
+   end
+   
+   if (ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) begin //B loses
+   scoreA <= scoreA + 1;
+	assign stop = 1;
+   end
 
 //////////////////////////////////////////////////////////////////	
 // use to draw a square puck
@@ -352,6 +364,8 @@ module pong_game (
 			ball_y <= 400; //starting Y position of ball
 			ball_up <= 0; //
 			ball_right <= 1;
+			scoreA <= 0;
+			scoreB <= 0;
 			end
 		else if (vsync_pulse && ~stop) begin
 		// vertical movement
@@ -377,7 +391,7 @@ module pong_game (
 				if (~ball_right && paddle_range1A && new_ball_x < PADDLE_XA+PADDLE_WIDTH) begin //this code is to make it bounce only on the left side paddle
 					ball_right <=1; //this changes direction from right to left //paddle_range1 checks if the y pos of ball is within y pos of paddle
 					ball_x <= PADDLE_XA+PADDLE_WIDTH;
-
+					end
 				if (ball_right && paddle_range1B && new_ball_x > PADDLE_XB) begin //this code is to make it bounce only on the right side paddle
 					ball_right <=0; //this changes direction from left to right //paddle_range1 checks if the y pos of ball is within y pos of paddle
 					ball_x <= PADDLE_XB;
@@ -452,7 +466,7 @@ module move_paddle (
     input pixel_clk, vsync_pulse,
 //    input [10:0] hcount, x,
     input up, down, left,right, reset, stop,
-	 output reg [9:0] paddle_yA, paddle_yB,
+	 output reg [9:0] paddle_yA, paddle_yB
 	 );
 	 
 	 parameter JUMP = 10;	 
