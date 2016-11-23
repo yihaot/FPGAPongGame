@@ -265,9 +265,9 @@ module pong_game (
  
  	wire [7:0] paddle_pix,ball;
 
-   parameter PADDLE_WIDTH = 16;
+   parameter PADDLE_WIDTH = 16; //dimension of the paddle
 	parameter PADDLE_HEIGHT = 256;
-   parameter PADDLE_X = 28;
+   parameter PADDLE_X = 1023-PADDLE_WIDTH; //fixed X position of the paddle
    wire [9:0] paddle_y;
 	
 	draw_box1 #(.WIDTH(PADDLE_WIDTH), .HEIGHT(PADDLE_HEIGHT), .COLOR(8'b111_000_00))
@@ -302,9 +302,9 @@ module pong_game (
 	assign speed_y = pspeed[1:0]*4;
 
    parameter BALL_SIZE = 7'd20;
-   parameter MAX_BALL_Y = 767 - BALL_SIZE; //
+   parameter MAX_BALL_Y = 767 - BALL_SIZE; //defines the Y boundaries in which the ball can move/bounce it
    parameter MIN_BALL_Y = 1;
-   parameter MAX_BALL_X = 1023 - BALL_SIZE; //
+   parameter MAX_BALL_X = 1023 - BALL_SIZE; //defines the X boundaries in which the ball can move/bounce it
 	
 	reg ball_up, ball_right;
 	
@@ -313,7 +313,9 @@ module pong_game (
 	wire paddle_range1 = ((ball_y+BALL_SIZE)>= paddle_y) && 
 				(ball_y<paddle_y+PADDLE_HEIGHT);
 
-   assign stop = ball_x + 1 < PADDLE_X + PADDLE_WIDTH;
+   //assign stop = ball_x + 1 < PADDLE_X + PADDLE_WIDTH; //this is the code that determines when the game "loses", checks when ball is out of left boundary
+   assign stop = ball_x + 1 > PADDLE_X + PADDLE_WIDTH; //this is the code that determines when the game "loses", checks when ball is out of right boundary
+
 
 //////////////////////////////////////////////////////////////////	
 // use to draw a square puck
@@ -339,35 +341,36 @@ module pong_game (
 		if (reset) begin
 //			speed_x <= {3'b0,switch[3:2]};
 //			speed_y <= {3'b0,switch[1:0]};
-			ball_x <= 400;
-			ball_y <= 400;
-			ball_up <= 0;
+			ball_x <= 400; //starting X position of ball
+			ball_y <= 400; //starting Y position of ball
+			ball_up <= 0; //
 			ball_right <= 1;
 			end
 		else if (vsync_pulse && ~stop) begin
 		// vertical movement
 				ball_y <= new_ball_y;
-			   if ((ball_up)&&(new_ball_y < MIN_BALL_Y) || (new_ball_y>MAX_BALL_Y)) begin
+			   if ((ball_up)&&(new_ball_y < MIN_BALL_Y) || (new_ball_y>MAX_BALL_Y)) begin //changes direction to downwards when it hits the top wall
 					ball_up <= 0;
 					ball_y <= MIN_BALL_Y;
 				end
-			   if ((~ball_up)&&(new_ball_y > MAX_BALL_Y))begin
+			   if ((~ball_up)&&(new_ball_y > MAX_BALL_Y))begin //changes direction to upwards when it hits the btm wall
 					ball_up <= 1;
 					ball_y <= MAX_BALL_Y;
 				end
 		//horizontal movement
 				ball_x <= new_ball_x;
-				if ((ball_right)&&(new_ball_x > MAX_BALL_X)) begin
-				   ball_right <= 0;
-					ball_x <= MAX_BALL_X;
-				   end
-				if ((ball_right)&&(new_ball_x > MAX_BALL_X)) begin
-				   ball_right <= 0;
-					ball_x <= MAX_BALL_X;
-				   end
-				if (~ball_right && paddle_range1	&& new_ball_x < PADDLE_X+PADDLE_WIDTH) begin
-					ball_right <=1;
+				// if ((ball_right)&&(new_ball_x > MAX_BALL_X)) begin //this will make a bouncable right wall
+				//    ball_right <= 0; //this changes direction from left to right
+				// 	ball_x <= MAX_BALL_X;
+				//    end
+
+				// if (~ball_right && paddle_range1	&& new_ball_x < PADDLE_X+PADDLE_WIDTH) begin //this code is to make it bounce only on the left side paddle
+				// 	ball_right <=1; //this changes direction from right to left //paddle_range1 checks if the y pos of ball is within y pos of paddle
+				// 	ball_x <= PADDLE_X+PADDLE_WIDTH;
+				if (ball_right && paddle_range1	&& new_ball_x > PADDLE_X+PADDLE_WIDTH) begin //this code is to make it bounce only on the right side paddle
+					ball_right <=0; //this changes direction from left to right //paddle_range1 checks if the y pos of ball is within y pos of paddle
 					ball_x <= PADDLE_X+PADDLE_WIDTH;
+
 					// lower half of the paddle, speed up 4x
 //					speed_x <= (ball_y >= paddle_y + paddle_height/2) ? sw[3:2]*4 : sw[3:2];
 //					speed_y <= (ball_y >= paddle_y + paddle_height/2) ? sw[1:0]*4 : sw[1:0];
