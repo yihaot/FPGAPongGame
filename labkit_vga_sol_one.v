@@ -267,7 +267,8 @@ module pong_game (
 
    parameter PADDLE_WIDTH = 16; //dimension of the paddle
 	parameter PADDLE_HEIGHT = 256;
-   parameter PADDLE_X = 1023-PADDLE_WIDTH; //fixed X position of the paddle
+   parameter PADDLE_X = 1023-PADDLE_WIDTH; //fixed X position of the paddle B
+     // parameter PADDLE_X = 28; //fixed X position of the paddle A
    wire [9:0] paddle_y;
 	
 	draw_box1 #(.WIDTH(PADDLE_WIDTH), .HEIGHT(PADDLE_HEIGHT), .COLOR(8'b111_000_00))
@@ -367,9 +368,9 @@ module pong_game (
 				// if (~ball_right && paddle_range1	&& new_ball_x < PADDLE_X+PADDLE_WIDTH) begin //this code is to make it bounce only on the left side paddle
 				// 	ball_right <=1; //this changes direction from right to left //paddle_range1 checks if the y pos of ball is within y pos of paddle
 				// 	ball_x <= PADDLE_X+PADDLE_WIDTH;
-				if (ball_right && paddle_range1	&& new_ball_x > PADDLE_X+PADDLE_WIDTH) begin //this code is to make it bounce only on the right side paddle
+				if (ball_right && paddle_range1	&& new_ball_x > PADDLE_X) begin //this code is to make it bounce only on the right side paddle
 					ball_right <=0; //this changes direction from left to right //paddle_range1 checks if the y pos of ball is within y pos of paddle
-					ball_x <= PADDLE_X+PADDLE_WIDTH;
+					ball_x <= PADDLE_X;
 
 					// lower half of the paddle, speed up 4x
 //					speed_x <= (ball_y >= paddle_y + paddle_height/2) ? sw[3:2]*4 : sw[3:2];
