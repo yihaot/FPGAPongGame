@@ -267,13 +267,13 @@ module pong_game (
 
    parameter PADDLE_WIDTH = 16; //dimension of the paddle
 	parameter PADDLE_HEIGHT = 256;
-   parameter PADDLE_X = 1023-PADDLE_WIDTH; //fixed X position of the paddle B
-     // parameter PADDLE_X = 28; //fixed X position of the paddle A
-   wire [9:0] paddle_y;
+   parameter PADDLE_XB = 1023-PADDLE_WIDTH; //fixed X position of the paddle B
+   parameter PADDLE_XA = 28; //fixed X position of the paddle A
+   wire [9:0] paddle_yA,paddle_yB,paddle_y;
 	
 	draw_box1 #(.WIDTH(PADDLE_WIDTH), .HEIGHT(PADDLE_HEIGHT), .COLOR(8'b111_000_00))
 	   paddle (.pixel_clk(pixel_clk), .hcount(hcount), .vcount(vcount),
-		.x(PADDLE_X), .y(paddle_y), .pixel(paddle_pix));
+		.xA(PADDLE_XA), .yA(paddle_yA),.xB(PADDLE_XB), .yB(paddle_yB), .pixel(paddle_pix));
 		
 
 
@@ -408,15 +408,15 @@ module draw_box1 #(parameter WIDTH=200,
 									 COLOR=8'b111_000_00)
 									  
    (input pixel_clk, 
-    input [10:0] hcount, x,
-    input [9:0] vcount, y,
+    input [10:0] hcount, xA,
+    input [9:0] vcount, yA,
 	 output reg [7:0] pixel
 	 );
 	 
 
-    always @(hcount or vcount) begin
+    always @(hcount or vcount) begin //this draws the two paddles
 	 
-		if ((hcount >= x && hcount < (x+WIDTH))  &&(vcount >= y && vcount < (y+HEIGHT)))
+		if (((hcount >= xA && hcount < (xA+WIDTH))  &&(vcount >= yA && vcount < (yA+HEIGHT))) ||  ((hcount >= xB && hcount < (xB+WIDTH))  &&(vcount >= yB && vcount < (yB+HEIGHT))))
 			pixel = COLOR;
 		
 		else 
