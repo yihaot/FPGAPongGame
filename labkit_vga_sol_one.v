@@ -96,7 +96,9 @@ module labkit(
 	assign vgablue = blank ? pixel[1:0] : 2'b0;
 	
 	debounce  db_up(.reset(reset), .clock(pixel_clk), .noisy(btn_up), .clean(up));			 
-	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_down), .clean(down));  
+	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_down), .clean(down));
+	debounce  db_left(.reset(reset), .clock(pixel_clk), .noisy(btn_left), .clean(left));			 
+	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_right), .clean(right));    
 	debounce  db_enter(.reset(1'b0), .clock(pixel_clk), .noisy(btn_enter), .clean(enter)); 
 	
    assign reset = enter;
@@ -148,7 +150,7 @@ module labkit(
 	assign vsync = vs;
 	assign hsync = hs;	
 	
-   pong_game psolution(.pixel_clk(pixel_clk), .reset(reset), .up(up), .down(down), .pspeed(switch[7:4]),
+   pong_game psolution(.pixel_clk(pixel_clk), .reset(reset), .up(up), .down(down),.left(left), .right(right), .pspeed(switch[7:4]),
 	    .hcount(hcount), .vcount(vcount), .hsync(hsync1), .vsync(vsync1), .blank(blank1),
 		 .phsync(phsync), .pvsync(pvsync), .pblank(pblank), .pixel(pong_pixel));
 	
@@ -202,6 +204,8 @@ module pong_game (
    input reset,		// 1 to initialize module
    input up,		// 1 when paddle should move up
    input down,  	// 1 when paddle should move down
+      input left,		// 1 when paddle B should move up
+   input right,  	// 1 when paddle B should move down
    input [3:0] pspeed,  // puck speed in pixels/tick 
    input [10:0] hcount,	// horizontal index of current pixel (0..1023)
    input [9:0]  vcount, // vertical index of current pixel (0..767)
@@ -269,7 +273,7 @@ module pong_game (
 	parameter PADDLE_HEIGHT = 256;
    parameter PADDLE_XB = 1023-PADDLE_WIDTH; //fixed X position of the paddle B
    parameter PADDLE_XA = 28; //fixed X position of the paddle A
-   wire [9:0] paddle_yA,paddle_yB,paddle_y;
+   wire [9:0] paddle_yA,paddle_yB;
 	
 	draw_box1 #(.WIDTH(PADDLE_WIDTH), .HEIGHT(PADDLE_HEIGHT), .COLOR(8'b111_000_00))
 	   paddle (.pixel_clk(pixel_clk), .hcount(hcount), .vcount(vcount),
@@ -292,7 +296,7 @@ module pong_game (
 	wire stop;  // used to halt the game
 	
    move_paddle paddle_motion(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
-		.up(up), .down(down), .paddle_y(paddle_y), .reset(system_reset), .stop(stop));
+		.up(up), .down(down), .left(left), .right(right), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
 
 
 	reg [9:0] ball_y = 300; 
@@ -311,11 +315,13 @@ module pong_game (
 	
 	wire [10:0] new_ball_x = ball_right ? ball_x + speed_x : ball_x - speed_x;
 	wire [9:0]  new_ball_y = ball_up    ? ball_y - speed_y : ball_y + speed_y;
-	wire paddle_range1 = ((ball_y+BALL_SIZE)>= paddle_y) && 
-				(ball_y<paddle_y+PADDLE_HEIGHT);
+	wire paddle_range1A = ((ball_y+BALL_SIZE)>= paddle_yA) &&  //checks if ball is beyond paddle A in y direction
+				(ball_y<paddle_yA+PADDLE_HEIGHT);
+	wire paddle_range1B = ((ball_y+BALL_SIZE)>= paddle_yB) &&  //checks if ball is beyond paddle B in y direction
+				(ball_y<paddle_yB+PADDLE_HEIGHT);
 
    //assign stop = ball_x + 1 < PADDLE_X + PADDLE_WIDTH; //this is the code that determines when the game "loses", checks when ball is out of left boundary
-   assign stop = ball_x + 1 > PADDLE_X + PADDLE_WIDTH; //this is the code that determines when the game "loses", checks when ball is out of right boundary
+   assign stop = ((ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) || (ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) ; //this is the code that determines when the game "loses", checks when ball is out of right boundary
 
 
 //////////////////////////////////////////////////////////////////	
@@ -368,9 +374,13 @@ module pong_game (
 				// if (~ball_right && paddle_range1	&& new_ball_x < PADDLE_X+PADDLE_WIDTH) begin //this code is to make it bounce only on the left side paddle
 				// 	ball_right <=1; //this changes direction from right to left //paddle_range1 checks if the y pos of ball is within y pos of paddle
 				// 	ball_x <= PADDLE_X+PADDLE_WIDTH;
-				if (ball_right && paddle_range1	&& new_ball_x > PADDLE_X) begin //this code is to make it bounce only on the right side paddle
+				if (~ball_right && paddle_range1A && new_ball_x < PADDLE_XA+PADDLE_WIDTH) begin //this code is to make it bounce only on the left side paddle
+					ball_right <=1; //this changes direction from right to left //paddle_range1 checks if the y pos of ball is within y pos of paddle
+					ball_x <= PADDLE_XA+PADDLE_WIDTH;
+
+				if (ball_right && paddle_range1B && new_ball_x > PADDLE_XB) begin //this code is to make it bounce only on the right side paddle
 					ball_right <=0; //this changes direction from left to right //paddle_range1 checks if the y pos of ball is within y pos of paddle
-					ball_x <= PADDLE_X;
+					ball_x <= PADDLE_XB;
 
 					// lower half of the paddle, speed up 4x
 //					speed_x <= (ball_y >= paddle_y + paddle_height/2) ? sw[3:2]*4 : sw[3:2];
@@ -408,8 +418,8 @@ module draw_box1 #(parameter WIDTH=200,
 									 COLOR=8'b111_000_00)
 									  
    (input pixel_clk, 
-    input [10:0] hcount, xA,
-    input [9:0] vcount, yA,
+    input [10:0] hcount, xA, xB,
+    input [9:0] vcount, yA, yB,
 	 output reg [7:0] pixel
 	 );
 	 
@@ -441,8 +451,8 @@ endmodule
 module move_paddle (
     input pixel_clk, vsync_pulse,
 //    input [10:0] hcount, x,
-    input up, down, reset, stop,
-	 output reg [9:0] paddle_y
+    input up, down, left,right, reset, stop,
+	 output reg [9:0] paddle_yA, paddle_yB,
 	 );
 	 
 	 parameter JUMP = 10;	 
@@ -458,24 +468,39 @@ module move_paddle (
 			
 			if (reset)
 				begin
-				paddle_y<=0;
+				paddle_yA<=0;
+				paddle_yB<=0;
 				end
 			else if (vsync_pulse && ~stop)
 				begin
 				
-				if (up)
-					paddle_y<=paddle_y - JUMP;				
+				if (up) //FOR PADDLE A
+					paddle_yA<=paddle_yA - JUMP;				
 					
 				if (down)
-					paddle_y<=paddle_y + JUMP;
+					paddle_yA<=paddle_yA + JUMP;
 					
 				
-				if (paddle_y <10)
-					paddle_y<=10;
+				if (paddle_yA <10)
+					paddle_yA<=10;
 				
 					
-				if (paddle_y+PADDLEHEIGHT > DEPTH - PADDLEHEIGHT)
-					paddle_y<=511;
+				if (paddle_yA+PADDLEHEIGHT > DEPTH - PADDLEHEIGHT)
+					paddle_yA<=511;
+
+				if (left) //FOR PADDLE B
+					paddle_yB<=paddle_yB - JUMP;				
+					
+				if (right)
+					paddle_yB<=paddle_yB + JUMP;
+					
+				
+				if (paddle_yB <10)
+					paddle_yB<=10;
+				
+					
+				if (paddle_yB+PADDLEHEIGHT > DEPTH - PADDLEHEIGHT)
+					paddle_yB<=511;
 					
 			
 				end
