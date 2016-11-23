@@ -267,7 +267,7 @@ module pong_game (
 
    parameter PADDLE_WIDTH = 16;
 	parameter PADDLE_HEIGHT = 256;
-   parameter PADDLE_X = 1000;
+   parameter PADDLE_X = 28;
    wire [9:0] paddle_y;
 	
 	draw_box1 #(.WIDTH(PADDLE_WIDTH), .HEIGHT(PADDLE_HEIGHT), .COLOR(8'b111_000_00))
@@ -313,7 +313,7 @@ module pong_game (
 	wire paddle_range1 = ((ball_y+BALL_SIZE)>= paddle_y) && 
 				(ball_y<paddle_y+PADDLE_HEIGHT);
 
-   assign stop = ball_x + 1 > PADDLE_X + PADDLE_WIDTH;
+   assign stop = ball_x + 1 < PADDLE_X + PADDLE_WIDTH;
 
 //////////////////////////////////////////////////////////////////	
 // use to draw a square puck
