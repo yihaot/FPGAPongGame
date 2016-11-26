@@ -327,12 +327,12 @@ module pong_game (
 
 
    if ((ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) begin //A loses
-   scoreB <= scoreB + 1;
+   //assign scoreB = scoreB + 1;
    assign stop = 1;
    end
    
    if (ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) begin //B loses
-   scoreA <= scoreA + 1;
+   //assign scoreA = scoreA + 1;
 	assign stop = 1;
    end
 
