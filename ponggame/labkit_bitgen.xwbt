@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\ponggame\labkit.ncd
+OUTFILE=C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\ponggame\labkit.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\ponggame
+LICENSE=WebPack
+USER_INFO=211252623_0_0_179

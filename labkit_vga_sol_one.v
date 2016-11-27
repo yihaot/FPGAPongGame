@@ -174,22 +174,54 @@ module labkit(
     );
 //
 //////////////////////////////////////////////////////////////////
+
+/////
+reg [30:0] timecounter = 0;
+reg [30:0] timeTaken = 0;
+reg [1:0] triggerState = 1;
+reg [30:0] distance = 0;
+reg [1:0] tempja = 0;
+//always@(posedge clk_100mhz) begin
+
+if (triggerState == 1) begin
+	if (timecounter < 500) begin //triggers trigger pin low for more than 5ms
+	tempja = 0;
+	end
+	if (timecounter < 1500) begin //triggers trigger pin high for more than 10ms
+		ja[0] = 1;
+	end
+	if (timecounter >= 1500) begin
+	ja[0] <= 0;
+	triggerState <= 2;
+	timecounter <= 0;
+	timeTaken <= 0;
+	end
+end
+ if (triggerState == 2) begin
+	if (ja[1] == 1) begin //start tracking the time after sound is triggered
+	timeTaken <= timecounter;
+	distance <= timeTaken/58200; //distance in cm
+	triggerState <= 1;
+	timecounter <= 0;
+	end
+	if (timecounter > 18181) begin //timeout if more than 3 metres
+		timecounter <= 0;
+		triggerState <= 1;
+		end
+	
+	end
+//timecounter <= timecounter + 1;
+
+
+//end
+ja[0] = tempja;
+	
+
+
+
+/////
 	
 endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -295,9 +327,15 @@ module pong_game (
 			 			
 	wire stop;  // used to halt the game
 	
-   move_paddle paddle_motion(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
-		.up(up), .down(down), .left(left), .right(right), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
 
+	if (switch[3] == 0) begin
+   	move_paddle paddle_motion(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
+		.up(up), .down(down), .left(left), .right(right), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
+   end
+   else if (switch[3] == 1) begin
+   	move_paddle_extended paddle_motion_extended(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
+		.distance(distance), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
+   end
 
 	reg [9:0] ball_y = 300; 
 	reg [10:0] ball_x = 300;
@@ -321,20 +359,20 @@ module pong_game (
 				(ball_y<paddle_yB+PADDLE_HEIGHT);
 
    //assign stop = ball_x + 1 < PADDLE_X + PADDLE_WIDTH; //this is the code that determines when the game "loses", checks when ball is out of left boundary
-   //assign stop = ((ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) || (ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) ; //this is the code that determines when the game "loses", checks when ball is out of right boundary
-	reg [9:0] scoreA = 0;  
-	reg [9:0] scoreB = 0;  //initialises the score 
-
-
-   if ((ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) begin //A loses
-   //assign scoreB = scoreB + 1;
-   assign stop = 1;
-   end
-   
-   if (ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) begin //B loses
-   //assign scoreA = scoreA + 1;
-	assign stop = 1;
-   end
+   assign stop = ((ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) || (ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) ; //this is the code that determines when the game "loses", checks when ball is out of right boundary
+//	reg [9:0] scoreA = 0;  
+//	reg [9:0] scoreB = 0;  //initialises the score 
+//
+//
+//   if ((ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) begin //A loses
+//   //assign scoreB = scoreB + 1;
+//   assign stop = 1;
+//   end
+//   
+//   if (ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) begin //B loses
+//   //assign scoreA = scoreA + 1;
+//	assign stop = 1;
+//   end
 
 //////////////////////////////////////////////////////////////////	
 // use to draw a square puck
@@ -364,8 +402,8 @@ module pong_game (
 			ball_y <= 400; //starting Y position of ball
 			ball_up <= 0; //
 			ball_right <= 1;
-			scoreA <= 0;
-			scoreB <= 0;
+//			scoreA <= 0;
+//			scoreB <= 0;
 			end
 		else if (vsync_pulse && ~stop) begin
 		// vertical movement
@@ -515,6 +553,71 @@ module move_paddle (
 					
 				if (paddle_yB+PADDLEHEIGHT > DEPTH - PADDLEHEIGHT)
 					paddle_yB<=511;
+					
+			
+				end
+		end
+		
+  
+	 
+endmodule
+
+
+//extended paddle movement mapped by sonar sensor
+// MOVE PADDLE
+
+module move_paddle_extended (
+    input pixel_clk, vsync_pulse,
+//    input [10:0] hcount, x,
+    input distance, reset, stop,
+	 output reg [9:0] paddle_yA, paddle_yB
+	 );
+	 
+	 parameter JUMP = 10;	 
+	 parameter DEPTH=767;
+	 parameter PADDLEHEIGHT = 128;
+
+	
+	 
+	 
+	 // paddle motion
+    always @ (posedge pixel_clk) 
+		begin
+			
+			if (reset)
+				begin
+				paddle_yA<=0;
+				paddle_yB<=0;
+				end
+			else if (vsync_pulse && ~stop)
+				begin
+				
+					
+				
+				if (distance <15)
+					paddle_yA<=510;
+				
+				if (distance > 115)
+					paddle_yA <= 10;
+					
+				if ((distance >= 15) && (distance < 116)) begin
+					paddle_yA <= (510 - (distance - 15)*5);
+				end
+					
+
+				// if (left) //FOR PADDLE B
+				// 	paddle_yB<=paddle_yB - JUMP;				
+					
+				// if (right)
+				// 	paddle_yB<=paddle_yB + JUMP;
+					
+				
+				// if (paddle_yB <10)
+				// 	paddle_yB<=10;
+				
+					
+				// if (paddle_yB+PADDLEHEIGHT > DEPTH - PADDLEHEIGHT)
+				// 	paddle_yB<=511;
 					
 			
 				end
