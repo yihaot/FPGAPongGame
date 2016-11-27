@@ -5,58 +5,40 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="1660" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 190: Procedural assignment to a non-register <arg fmt="%s" index="1">ja</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="1660" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 189: Procedural assignment to a non-register <arg fmt="%s" index="1">led</arg> is not permitted, left-hand side should be reg/integer/time/genvar
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1660" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 190: Procedural assignment to a non-register <arg fmt="%s" index="1">ja</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="1660" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 189: Procedural assignment to a non-register <arg fmt="%s" index="1">led</arg> is not permitted, left-hand side should be reg/integer/time/genvar
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1660" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 193: Procedural assignment to a non-register <arg fmt="%s" index="1">ja</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 21: Module &lt;<arg fmt="%s" index="1">labkit</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1660" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 193: Procedural assignment to a non-register <arg fmt="%s" index="1">ja</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 236: Module &lt;<arg fmt="%s" index="1">pong_game</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1660" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 214: Procedural assignment to a non-register <arg fmt="%s" index="1">ja</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 470: Module &lt;<arg fmt="%s" index="1">draw_box1</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1660" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 214: Procedural assignment to a non-register <arg fmt="%s" index="1">ja</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 505: Module &lt;<arg fmt="%s" index="1">move_paddle</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 21: Module &lt;<arg fmt="%s" index="1">labkit</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 571: Module &lt;<arg fmt="%s" index="1">move_paddle_extended</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 328: &lt;<arg fmt="%s" index="1">switch</arg>&gt; is not declared.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 646: Module &lt;<arg fmt="%s" index="1">round_piped</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 332: &lt;<arg fmt="%s" index="1">switch</arg>&gt; is not declared.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 698: Module &lt;<arg fmt="%s" index="1">vga_general</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 231: Module &lt;<arg fmt="%s" index="1">pong_game</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 780: Module &lt;<arg fmt="%s" index="1">debounce</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 465: Module &lt;<arg fmt="%s" index="1">draw_box1</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 813: Module &lt;<arg fmt="%s" index="1">display_4hex</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 500: Module &lt;<arg fmt="%s" index="1">move_paddle</arg>&gt; ignored due to previous errors.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 566: Module &lt;<arg fmt="%s" index="1">move_paddle_extended</arg>&gt; ignored due to previous errors.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 641: Module &lt;<arg fmt="%s" index="1">round_piped</arg>&gt; ignored due to previous errors.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 693: Module &lt;<arg fmt="%s" index="1">vga_general</arg>&gt; ignored due to previous errors.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 775: Module &lt;<arg fmt="%s" index="1">debounce</arg>&gt; ignored due to previous errors.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 808: Module &lt;<arg fmt="%s" index="1">display_4hex</arg>&gt; ignored due to previous errors.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 885: Module &lt;<arg fmt="%s" index="1">dcm_all_v2</arg>&gt; ignored due to previous errors.
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 890: Module &lt;<arg fmt="%s" index="1">dcm_all_v2</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>

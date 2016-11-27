@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Nov 26 22:32:41 2016
+Sun Nov 27 22:36:21 2016
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -337,7 +337,7 @@ Pinout by Pin Number:
 |V9        |switch<2>   |IOB      |IO_L32N_GCLK28_2             |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |V10       |clk_100mhz  |IOB      |IO_L30N_GCLK0_USERCCLK_2     |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |V11       |ja<7>       |IOB      |IO_L23N_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|V12       |ja<1>       |IOB      |IO_L19N_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|V12       |ja<1>       |IOB      |IO_L19N_2                    |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |V13       |            |IOBS     |IO_L14N_D12_2                |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V14       |            |IOBS     |IO_L12N_D2_MISO3_2           |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |V15       |led<3>      |IOB      |IO_L5N_2                     |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |

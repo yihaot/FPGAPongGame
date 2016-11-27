@@ -180,26 +180,29 @@ reg [30:0] timecounter = 0;
 reg [30:0] timeTaken = 0;
 reg [1:0] triggerState = 1;
 reg [30:0] distance = 0;
-reg [1:0] tempja = 0;
-//always@(posedge clk_100mhz) begin
-
+reg trig = 0;
+reg echo = 0;
+reg prevEcho = 0;
+always@(posedge clk_100mhz) begin
 if (triggerState == 1) begin
 	if (timecounter < 500) begin //triggers trigger pin low for more than 5ms
-	tempja = 0;
+		trig <= 0;
 	end
 	if (timecounter < 1500) begin //triggers trigger pin high for more than 10ms
-		ja[0] = 1;
+		trig <= 1;
 	end
 	if (timecounter >= 1500) begin
-	ja[0] <= 0;
+	trig <= 0;
 	triggerState <= 2;
-	timecounter <= 0;
+
+	end
+ if (triggerState == 2) begin
+	if ((prevEcho == 0) && (echo == 1)) begin //start tracking the time after sound is triggered
+		timecounter <= 0;
 	timeTaken <= 0;
 	end
-end
- if (triggerState == 2) begin
-	if (ja[1] == 1) begin //start tracking the time after sound is triggered
-	timeTaken <= timecounter;
+	if ((echo == 0) && (prevEcho == 1))begin
+			timeTaken <= timecounter;
 	distance <= timeTaken/58200; //distance in cm
 	triggerState <= 1;
 	timecounter <= 0;
@@ -208,17 +211,19 @@ end
 		timecounter <= 0;
 		triggerState <= 1;
 		end
-	
 	end
-//timecounter <= timecounter + 1;
+timecounter <= timecounter + 1;
+prevEcho <= echo;
+end
 
+//assign ja[0] = trig;
+echo <= jb[1];
 
-//end
-ja[0] = tempja;
-	
-
-
-
+end
+	assign ja[1] = trig;
+	assign led[0] = trig;
+	assign led[1] = echo;
+ 
 /////
 	
 endmodule
@@ -328,14 +333,14 @@ module pong_game (
 	wire stop;  // used to halt the game
 	
 
-	if (switch[3] == 0) begin
-   	move_paddle paddle_motion(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
-		.up(up), .down(down), .left(left), .right(right), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
-   end
-   else if (switch[3] == 1) begin
+	// if (switch[3] == 0) begin
+ //   	move_paddle paddle_motion(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
+	// 	.up(up), .down(down), .left(left), .right(right), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
+ //   end
+   //else if (switch[3] == 1) begin
    	move_paddle_extended paddle_motion_extended(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
 		.distance(distance), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
-   end
+   //end
 
 	reg [9:0] ball_y = 300; 
 	reg [10:0] ball_x = 300;

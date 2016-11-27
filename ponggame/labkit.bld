@@ -23,14 +23,6 @@ WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_sys_clk_pin = PERIOD
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:470 - bidirect pad net 'ja<7>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'ja<6>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'ja<5>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'ja<4>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'ja<3>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'ja<2>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'ja<1>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'ja<0>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jb<7>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jb<6>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jb<5>' has no legal driver
@@ -39,6 +31,13 @@ WARNING:NgdBuild:470 - bidirect pad net 'jb<3>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jb<2>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jb<1>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jb<0>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ja<7>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ja<6>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ja<5>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ja<4>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ja<3>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ja<2>' has no legal driver
+WARNING:NgdBuild:470 - bidirect pad net 'ja<0>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jc<7>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jc<6>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jc<5>' has no legal driver
@@ -97,12 +96,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:  65
+  Number of warnings:  64
 
-Total memory usage is 157424 kilobytes
+Total memory usage is 156136 kilobytes
 
 Writing NGD file "labkit.ngd" ...
-Total REAL time to NGDBUILD completion:  10 sec
-Total CPU time to NGDBUILD completion:   9 sec
+Total REAL time to NGDBUILD completion:  9 sec
+Total CPU time to NGDBUILD completion:   8 sec
 
 Writing NGDBUILD log file "labkit.bld"...
