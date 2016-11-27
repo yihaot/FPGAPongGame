@@ -95,10 +95,10 @@ module labkit(
 	assign vgagreen = blank ? pixel[4:2] : 3'b0;
 	assign vgablue = blank ? pixel[1:0] : 2'b0;
 	
-	debounce  db_up(.reset(reset), .clock(pixel_clk), .noisy(btn_up), .clean(up));			 
-	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_down), .clean(down));
-	debounce  db_left(.reset(reset), .clock(pixel_clk), .noisy(btn_left), .clean(left));			 
-	debounce  db_right(.reset(reset), .clock(pixel_clk), .noisy(btn_right), .clean(right));    
+//	debounce  db_up(.reset(reset), .clock(pixel_clk), .noisy(btn_up), .clean(up));			 
+//	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_down), .clean(down));
+	// debounce  db_left(.reset(reset), .clock(pixel_clk), .noisy(btn_left), .clean(left));			 
+	// debounce  db_right(.reset(reset), .clock(pixel_clk), .noisy(btn_right), .clean(right));    
 	debounce  db_enter(.reset(1'b0), .clock(pixel_clk), .noisy(btn_enter), .clean(enter)); 
 	
    assign reset = enter;
@@ -150,10 +150,43 @@ module labkit(
 	assign vsync = vs;
 	assign hsync = hs;	
 	
+   // pong_game psolution(.pixel_clk(pixel_clk), .reset(reset), .up(up), .down(down),.left(left), .right(right),.haha((430)), .pspeed(switch[7:4]),
+	  //   .hcount(hcount), .vcount(vcount), .hsync(hsync1), .vsync(vsync1), .blank(blank1),
+		 // .phsync(phsync), .pvsync(pvsync), .pblank(pblank), .pixel(pong_pixel));
+	
    pong_game psolution(.pixel_clk(pixel_clk), .reset(reset), .up(up), .down(down),.left(left), .right(right), .pspeed(switch[7:4]),
 	    .hcount(hcount), .vcount(vcount), .hsync(hsync1), .vsync(vsync1), .blank(blank1),
 		 .phsync(phsync), .pvsync(pvsync), .pblank(pblank), .pixel(pong_pixel));
-	
+
+reg uptrack = 0;
+reg downtrack = 0;
+reg lefttrack = 0;
+reg righttrack = 0;
+
+
+always @(posedge pixel_clk) begin
+if ((pulse_width[7:0]) < 8'b01000000)
+uptrack <= 1;
+else
+uptrack <= 0;
+if ((pulse_width[15:8]) < 8'b01000000)
+downtrack <= 1;
+else
+downtrack <= 0;
+if ((pulse_width[31:24]) < 8'b01000000)
+lefttrack <= 1;
+else
+lefttrack <= 0;
+if ((pulse_width[39:32]) < 8'b01000000)
+righttrack <= 1;
+else
+righttrack <= 0;
+ end
+
+assign up = uptrack;
+assign down = downtrack;
+assign left = lefttrack;
+assign right = righttrack;
 
 //////////////////////////////////////////////////////////////////
 // 
@@ -168,7 +201,8 @@ module labkit(
 
 	display_4hex  my_display(
 	  .clk(pixel_clk),
-     .data(counter[30:15]),
+	  .data((pulse_width[7:0])),
+     //.data(counter[30:15]),
 	  .seg(seg[6:0]),
      .strobe(dig)
     );
@@ -176,59 +210,121 @@ module labkit(
 //////////////////////////////////////////////////////////////////
 
 /////
-reg [30:0] timecounter = 0;
-reg [30:0] timeTaken = 0;
-reg [1:0] triggerState = 1;
-reg [30:0] distance = 0;
-reg trig = 0;
-reg echo = 0;
-reg prevEcho = 0;
-always@(posedge clk_100mhz) begin
-if (triggerState == 1) begin
-	if (timecounter < 500) begin //triggers trigger pin low for more than 5ms
-		trig <= 0;
-	end
-	if (timecounter < 1500) begin //triggers trigger pin high for more than 10ms
-		trig <= 1;
-	end
-	if (timecounter >= 1500) begin
-	trig <= 0;
-	triggerState <= 2;
+// reg [30:0] timecounter = 0;
+// reg [30:0] timeTaken = 0;
+// reg [1:0] triggerState = 1;
+// reg [30:0] distance = 0;
+// reg trig = 0;
+// reg echo = 0;
+// reg prevEcho = 0;
+// always@(posedge clk_100mhz) begin
+// if (triggerState == 1) begin
+// 	if (timecounter < 500) begin //triggers trigger pin low for more than 5ms
+// 		trig <= 0;
+// 	end
+// 	if (timecounter < 1500) begin //triggers trigger pin high for more than 10ms
+// 		trig <= 1;
+// 	end
+// 	if (timecounter >= 1500) begin
+// 	trig <= 0;
+// 	triggerState <= 2;
 
-	end
- if (triggerState == 2) begin
-	if ((prevEcho == 0) && (echo == 1)) begin //start tracking the time after sound is triggered
-		timecounter <= 0;
-	timeTaken <= 0;
-	end
-	if ((echo == 0) && (prevEcho == 1))begin
-			timeTaken <= timecounter;
-	distance <= timeTaken/58200; //distance in cm
-	triggerState <= 1;
-	timecounter <= 0;
-	end
-	if (timecounter > 18181) begin //timeout if more than 3 metres
-		timecounter <= 0;
-		triggerState <= 1;
-		end
-	end
-timecounter <= timecounter + 1;
-prevEcho <= echo;
-end
+// 	end
+//  if (triggerState == 2) begin
+// 	if ((prevEcho == 0) && (echo == 1)) begin //start tracking the time after sound is triggered
+// 		timecounter <= 0;
+// 	timeTaken <= 0;
+// 	end
+// 	if ((echo == 0) && (prevEcho == 1))begin
+// 			timeTaken <= timecounter;
+// 	distance <= timeTaken/58200; //distance in cm
+// 	triggerState <= 1;
+// 	timecounter <= 0;
+// 	end
+// 	if (timecounter > 18181) begin //timeout if more than 3 metres
+// 		timecounter <= 0;
+// 		triggerState <= 1;
+// 		end
+// 	end
+// timecounter <= timecounter + 1;
+// prevEcho <= echo;
+// end
 
-//assign ja[0] = trig;
-echo <= jb[1];
+// //assign ja[0] = trig;
+// echo <= jb[1];
 
-end
-	assign ja[1] = trig;
-	assign led[0] = trig;
-	assign led[1] = echo;
+// end
+// 	assign ja[1] = trig;
+// 	assign led[0] = trig;
+// 	assign led[1] = echo;
  
 /////
-	
+
+
+///testing new sonar///
+reg SonarClk;
+reg [25:0] counter3;
+wire [39:0] pulse_width;
+always@(posedge clk_100mhz) begin
+	  counter3 <= (counter3 == (20-1)) ? 0 : counter3 + 1;
+	  SonarClk <= (counter3 == (20-1)) ? !SonarClk : SonarClk;
+	end
+Sonar Sonar1(.clock(SonarClk), .pulse(jc[4:0]), .data(pulse_width));
+
+wire [7:0] Unpacked[4:0] = {(pulse_width[7:0]),(pulse_width[15:8]),(pulse_width[23:16]),(pulse_width[31:24]),(pulse_width[39:32])};
+//reg distance;
+//assign distance = Unpacked[0];
+
+
+//(pulse_width[7:0]) see this value
 endmodule
 
+module Sonar(input clock, input [4:0]pulse, output reg [39:0] data);
 
+	reg [39:0] pulse_count[4:0];
+	reg pulse_state[4:0];
+	reg pulse_old[4:0];
+	reg [2:0]i;
+
+	always @ (posedge clock)
+		begin
+		for(i = 0; i < 5; i=i+1)begin
+			if(pulse[i] == 1)
+				begin
+					if(pulse_old[i] == 0)
+						begin
+							pulse_state[i] = 0;
+							pulse_count[i] = 0;
+						end
+					else
+						pulse_count[i] = pulse_count[i] + 1;
+				end
+			else
+				begin
+					if(pulse_old[i] == 1)
+						begin
+							pulse_state[i] = 1;
+							case(i)
+								0	: 	data [7:0] = (pulse_count[i]>>8);
+								1	:	data [15:8] = (pulse_count[i]>>8);
+								2	:	data [23:16] = (pulse_count[i]>>8);
+								3	:	data [31:24] = (pulse_count[i]>>8);
+								4	:	data [39:32] = (pulse_count[i]>>8);
+								default:	data [7:0] = (pulse_count[i]>>8);
+							endcase
+							pulse_count[i] = 0;
+						end
+					else
+						begin
+							pulse_state[i] = 0;
+							pulse_count[i] = 0;
+						end
+				end
+			pulse_old[i] = pulse[i];
+			end
+		end
+
+endmodule
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -243,6 +339,7 @@ module pong_game (
    input down,  	// 1 when paddle should move down
       input left,		// 1 when paddle B should move up
    input right,  	// 1 when paddle B should move down
+//   input haha,
    input [3:0] pspeed,  // puck speed in pixels/tick 
    input [10:0] hcount,	// horizontal index of current pixel (0..1023)
    input [9:0]  vcount, // vertical index of current pixel (0..767)
@@ -334,12 +431,12 @@ module pong_game (
 	
 
 	// if (switch[3] == 0) begin
- //   	move_paddle paddle_motion(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
-	// 	.up(up), .down(down), .left(left), .right(right), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
+    	move_paddle paddle_motion(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
+	 	.up(up), .down(down), .left(left), .right(right), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
  //   end
    //else if (switch[3] == 1) begin
-   	move_paddle_extended paddle_motion_extended(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
-		.distance(distance), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
+   	//move_paddle_extended paddle_motion_extended(.pixel_clk(pixel_clk), .vsync_pulse(vsync_pulse),
+		// .distance(haha), .paddle_yA(paddle_yA),.paddle_yB(paddle_yB), .reset(system_reset), .stop(stop));
    //end
 
 	reg [9:0] ball_y = 300; 
@@ -600,7 +697,7 @@ module move_paddle_extended (
 					
 				
 				if (distance <15)
-					paddle_yA<=510;
+					paddle_yA<=210; //510
 				
 				if (distance > 115)
 					paddle_yA <= 10;

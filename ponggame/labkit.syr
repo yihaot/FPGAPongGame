@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.43 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
  
 --> Reading design: labkit.prj
 
@@ -107,33 +107,1036 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" into library work
 Parsing module <labkit>.
-ERROR:HDLCompiler:1660 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 189: Procedural assignment to a non-register led is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 189: Procedural assignment to a non-register led is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 21: Module <labkit> ignored due to previous errors.
+Parsing module <Sonar>.
 Parsing module <pong_game>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 236: Module <pong_game> ignored due to previous errors.
 Parsing module <draw_box1>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 470: Module <draw_box1> ignored due to previous errors.
 Parsing module <move_paddle>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 505: Module <move_paddle> ignored due to previous errors.
 Parsing module <move_paddle_extended>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 571: Module <move_paddle_extended> ignored due to previous errors.
 Parsing module <round_piped>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 646: Module <round_piped> ignored due to previous errors.
 Parsing module <vga_general>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 698: Module <vga_general> ignored due to previous errors.
 Parsing module <debounce>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 780: Module <debounce> ignored due to previous errors.
 Parsing module <display_4hex>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 813: Module <display_4hex> ignored due to previous errors.
 Parsing module <dcm_all_v2>.
-ERROR:HDLCompiler:598 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 890: Module <dcm_all_v2> ignored due to previous errors.
-Verilog file C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <labkit>.
+
+Elaborating module <dcm_all_v2(DCM_DIVIDE=20,DCM_MULTIPLY=13)>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <DCM(CLK_FEEDBACK="1X",CLKDV_DIVIDE=4.0,CLKFX_DIVIDE=20,CLKFX_MULTIPLY=13,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10000.0,CLKOUT_PHASE_SHIFT="NONE",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",DFS_FREQUENCY_MODE="LOW",DLL_FREQUENCY_MODE="LOW",DUTY_CYCLE_CORRECTION="TRUE",FACTORY_JF=16'b1100000010000000,PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 75: Assignment to clk_100mhz_buf ignored, since the identifier is never used
+
+Elaborating module <debounce>.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 902: Result of 21-bit expression is truncated to fit in 20-bit target.
+
+Elaborating module <vga_general>.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 871: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 872: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 107: Assignment to hblank1 ignored, since the identifier is never used
+
+Elaborating module <pong_game>.
+
+Elaborating module <draw_box1(WIDTH=16,HEIGHT=256,COLOR=8'b11100000)>.
+WARNING:HDLCompiler:91 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 583: Signal <xA> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 414: Size mismatch in connection of port <xA>. Formal port size is 11-bit while actual signal size is 32-bit.
+
+Elaborating module <move_paddle>.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 632: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 635: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 646: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 649: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <round_piped>.
+WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 493: Size mismatch in connection of port <ball_size>. Formal port size is 8-bit while actual signal size is 7-bit.
+WARNING:HDLCompiler:634 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 435: Net <system_reset> does not have a driver.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 197: Result of 32-bit expression is truncated to fit in 31-bit target.
+
+Elaborating module <display_4hex>.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 943: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 204: Size mismatch in connection of port <data>. Formal port size is 16-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 269: Result of 32-bit expression is truncated to fit in 26-bit target.
+
+Elaborating module <Sonar>.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 308: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: case condition never applies
+WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: case condition never applies
+WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: case condition never applies
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 309: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: Result of 32-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <labkit>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+WARNING:Xst:647 - Input <jc<7:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <jd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn_up> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn_left> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn_down> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn_right> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 73: Output port <CLKSYS> of the instance <my_clocks> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 106: Output port <hblank> of the instance <video_driver> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <vsync>.
+    Found 1-bit register for signal <b>.
+    Found 8-bit register for signal <rgb>.
+    Found 1-bit register for signal <uptrack>.
+    Found 1-bit register for signal <downtrack>.
+    Found 1-bit register for signal <lefttrack>.
+    Found 1-bit register for signal <righttrack>.
+    Found 26-bit register for signal <counter3>.
+    Found 1-bit register for signal <SonarClk>.
+    Found 1-bit register for signal <hsync>.
+    Found 27-bit adder for signal <n0075[26:0]> created at line 269.
+    Found 8-bit 4-to-1 multiplexer for signal <switch[1]_pong_pixel[7]_wide_mux_12_OUT> created at line 118.
+    Found 8-bit comparator greater for signal <pulse_width[7]_GND_1_o_LessThan_17_o> created at line 168
+    Found 8-bit comparator greater for signal <pulse_width[15]_GND_1_o_LessThan_18_o> created at line 172
+    Found 8-bit comparator greater for signal <pulse_width[31]_GND_1_o_LessThan_19_o> created at line 176
+    Found 8-bit comparator greater for signal <pulse_width[39]_GND_1_o_LessThan_20_o> created at line 180
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  13 Multiplexer(s).
+Unit <labkit> synthesized.
+
+Synthesizing Unit <dcm_all_v2>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+        DCM_DIVIDE = 20
+        DCM_MULTIPLY = 13
+    Summary:
+	no macro.
+Unit <dcm_all_v2> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+        DELAY = 400000
+    Found 1-bit register for signal <new>.
+    Found 1-bit register for signal <clean>.
+    Found 20-bit register for signal <count>.
+    Found 20-bit adder for signal <count[19]_GND_5_o_add_3_OUT> created at line 902.
+    Found 1-bit comparator equal for signal <n0000> created at line 894
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <vga_general>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+        hfp = 24
+        hsy = 136
+        hbp = 160
+        vfp = 3
+        vsy = 6
+        vbp = 29
+        hsize = 1023
+        vsize = 767
+    Found 10-bit register for signal <vcount>.
+    Found 11-bit register for signal <hcount>.
+    Found 12-bit adder for signal <n0033[11:0]> created at line 871.
+    Found 11-bit adder for signal <n0035[10:0]> created at line 872.
+    Found 11-bit comparator greater for signal <hcount[10]_PWR_6_o_LessThan_3_o> created at line 861
+    Found 11-bit comparator greater for signal <PWR_6_o_hcount[10]_LessThan_4_o> created at line 861
+    Found 10-bit comparator greater for signal <vcount[9]_PWR_6_o_LessThan_5_o> created at line 862
+    Found 10-bit comparator greater for signal <PWR_6_o_vcount[9]_LessThan_6_o> created at line 862
+    Found 11-bit comparator lessequal for signal <n0008> created at line 864
+    Found 10-bit comparator lessequal for signal <n0010> created at line 865
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga_general> synthesized.
+
+Synthesizing Unit <pong_game>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+        PADDLE_WIDTH = 16
+        PADDLE_HEIGHT = 256
+        PADDLE_XB = 1007
+        PADDLE_XA = 28
+        BALL_SIZE = 7'b0010100
+        MAX_BALL_Y = 32'b00000000000000000000001011101011
+        MIN_BALL_Y = 1
+        MAX_BALL_X = 32'b00000000000000000000001111101011
+WARNING:Xst:653 - Signal <system_reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 2-bit register for signal <vsync_delay>.
+    Found 2-bit register for signal <blank_delay>.
+    Found 16-bit register for signal <paddle_pix_delay>.
+    Found 1-bit register for signal <vsync_delayed>.
+    Found 11-bit register for signal <ball_x>.
+    Found 10-bit register for signal <ball_y>.
+    Found 1-bit register for signal <ball_up>.
+    Found 1-bit register for signal <ball_right>.
+    Found 2-bit register for signal <hsync_delay>.
+    Found 11-bit subtractor for signal <ball_x[10]_GND_7_o_sub_11_OUT> created at line 456.
+    Found 10-bit subtractor for signal <ball_y[9]_GND_7_o_sub_13_OUT> created at line 457.
+    Found 11-bit adder for signal <ball_x[10]_GND_7_o_add_9_OUT> created at line 456.
+    Found 10-bit adder for signal <ball_y[9]_GND_7_o_add_13_OUT> created at line 457.
+    Found 10-bit adder for signal <ball_y[9]_GND_7_o_add_15_OUT> created at line 458.
+    Found 11-bit adder for signal <n0113> created at line 459.
+    Found 11-bit adder for signal <n0115> created at line 461.
+    Found 12-bit adder for signal <n0116> created at line 464.
+    Found 10-bit comparator lessequal for signal <n0020> created at line 458
+    Found 11-bit comparator greater for signal <GND_7_o_BUS_0004_LessThan_19_o> created at line 459
+    Found 10-bit comparator lessequal for signal <n0025> created at line 460
+    Found 11-bit comparator greater for signal <GND_7_o_BUS_0006_LessThan_23_o> created at line 461
+    Found 12-bit comparator greater for signal <GND_7_o_BUS_0007_LessThan_25_o> created at line 464
+    Found 12-bit comparator greater for signal <BUS_0008_GND_7_o_LessThan_27_o> created at line 464
+    Found 10-bit comparator greater for signal <new_ball_y[9]_GND_7_o_LessThan_29_o> created at line 513
+    Found 10-bit comparator greater for signal <PWR_7_o_new_ball_y[9]_LessThan_30_o> created at line 513
+    Found 11-bit comparator greater for signal <new_ball_x[10]_GND_7_o_LessThan_34_o> created at line 531
+    Found 11-bit comparator greater for signal <GND_7_o_new_ball_x[10]_LessThan_36_o> created at line 535
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <pong_game> synthesized.
+
+Synthesizing Unit <draw_box1>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+        WIDTH = 16
+        HEIGHT = 256
+        COLOR = 8'b11100000
+WARNING:Xst:647 - Input <pixel_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 11-bit adder for signal <n0038> created at line 583.
+    Found 11-bit adder for signal <n0042> created at line 583.
+    Found 11-bit comparator lessequal for signal <n0000> created at line 583
+    Found 12-bit comparator greater for signal <GND_8_o_BUS_0001_LessThan_3_o> created at line 583
+    Found 10-bit comparator lessequal for signal <n0005> created at line 583
+    Found 11-bit comparator greater for signal <GND_8_o_BUS_0002_LessThan_6_o> created at line 583
+    Found 11-bit comparator lessequal for signal <n0011> created at line 583
+    Found 12-bit comparator greater for signal <GND_8_o_BUS_0003_LessThan_9_o> created at line 583
+    Found 10-bit comparator lessequal for signal <n0016> created at line 583
+    Found 11-bit comparator greater for signal <GND_8_o_BUS_0004_LessThan_12_o> created at line 583
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+Unit <draw_box1> synthesized.
+
+Synthesizing Unit <move_paddle>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+        JUMP = 10
+        DEPTH = 767
+        PADDLEHEIGHT = 128
+    Found 10-bit register for signal <paddle_yB>.
+    Found 10-bit register for signal <paddle_yA>.
+    Found 10-bit adder for signal <paddle_yA[9]_GND_9_o_add_3_OUT> created at line 635.
+    Found 11-bit adder for signal <n0047> created at line 642.
+    Found 10-bit adder for signal <paddle_yB[9]_GND_9_o_add_12_OUT> created at line 649.
+    Found 11-bit adder for signal <n0049> created at line 656.
+    Found 10-bit subtractor for signal <GND_9_o_GND_9_o_sub_2_OUT<9:0>> created at line 632.
+    Found 10-bit subtractor for signal <GND_9_o_GND_9_o_sub_11_OUT<9:0>> created at line 646.
+    Found 10-bit comparator greater for signal <paddle_yA[9]_GND_9_o_LessThan_6_o> created at line 638
+    Found 11-bit comparator greater for signal <GND_9_o_BUS_0002_LessThan_9_o> created at line 642
+    Found 10-bit comparator greater for signal <paddle_yB[9]_GND_9_o_LessThan_15_o> created at line 652
+    Found 11-bit comparator greater for signal <GND_9_o_BUS_0004_LessThan_18_o> created at line 656
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <move_paddle> synthesized.
+
+Synthesizing Unit <round_piped>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+        rCOLOR = 8'b11111111
+WARNING:Xst:647 - Input <ball_size<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 20-bit register for signal <y1square>.
+    Found 8-bit register for signal <rpixel>.
+    Found 22-bit register for signal <x1square>.
+    Found 11-bit subtractor for signal <hcount[10]_rx[10]_sub_4_OUT> created at line 760.
+    Found 11-bit subtractor for signal <rx[10]_hcount[10]_sub_5_OUT> created at line 760.
+    Found 10-bit subtractor for signal <vcount[9]_ry[9]_sub_8_OUT> created at line 761.
+    Found 10-bit subtractor for signal <ry[9]_vcount[9]_sub_9_OUT> created at line 761.
+    Found 22-bit adder for signal <x1square[21]_GND_10_o_add_16_OUT> created at line 778.
+    Found 8x8-bit multiplier for signal <rsquare<15:0>> created at line 759.
+    Found 11x11-bit multiplier for signal <x1[10]_x1[10]_MuLt_11_OUT> created at line 771.
+    Found 10x10-bit multiplier for signal <y1[9]_y1[9]_MuLt_12_OUT> created at line 772.
+    Found 11-bit comparator greater for signal <rx[10]_hcount[10]_LessThan_3_o> created at line 760
+    Found 10-bit comparator greater for signal <ry[9]_vcount[9]_LessThan_7_o> created at line 761
+    Found 22-bit comparator greater for signal <n0016> created at line 778
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <round_piped> synthesized.
+
+Synthesizing Unit <display_4hex>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+    Found 7-bit register for signal <seg>.
+    Found 4-bit register for signal <strobe>.
+    Found 14-bit register for signal <counter>.
+    Found 14-bit adder for signal <counter[13]_GND_14_o_add_17_OUT> created at line 943.
+    Found 4x4-bit Read Only RAM for signal <counter[13]_PWR_13_o_wide_mux_23_OUT>
+    Found 7-bit 4-to-1 multiplexer for signal <counter[13]_data[3]_wide_mux_22_OUT> created at line 944.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <display_4hex> synthesized.
+
+Synthesizing Unit <Sonar>.
+    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
+    Found 200-bit register for signal <n0543>.
+    Found 1-bit register for signal <data<39>>.
+    Found 1-bit register for signal <data<38>>.
+    Found 1-bit register for signal <data<37>>.
+    Found 1-bit register for signal <data<36>>.
+    Found 1-bit register for signal <data<35>>.
+    Found 1-bit register for signal <data<34>>.
+    Found 1-bit register for signal <data<33>>.
+    Found 1-bit register for signal <data<32>>.
+    Found 1-bit register for signal <data<31>>.
+    Found 1-bit register for signal <data<30>>.
+    Found 1-bit register for signal <data<29>>.
+    Found 1-bit register for signal <data<28>>.
+    Found 1-bit register for signal <data<27>>.
+    Found 1-bit register for signal <data<26>>.
+    Found 1-bit register for signal <data<25>>.
+    Found 1-bit register for signal <data<24>>.
+    Found 1-bit register for signal <data<23>>.
+    Found 1-bit register for signal <data<22>>.
+    Found 1-bit register for signal <data<21>>.
+    Found 1-bit register for signal <data<20>>.
+    Found 1-bit register for signal <data<19>>.
+    Found 1-bit register for signal <data<18>>.
+    Found 1-bit register for signal <data<17>>.
+    Found 1-bit register for signal <data<16>>.
+    Found 1-bit register for signal <data<15>>.
+    Found 1-bit register for signal <data<14>>.
+    Found 1-bit register for signal <data<13>>.
+    Found 1-bit register for signal <data<12>>.
+    Found 1-bit register for signal <data<11>>.
+    Found 1-bit register for signal <data<10>>.
+    Found 1-bit register for signal <data<9>>.
+    Found 1-bit register for signal <data<8>>.
+    Found 1-bit register for signal <data<7>>.
+    Found 1-bit register for signal <data<6>>.
+    Found 1-bit register for signal <data<5>>.
+    Found 1-bit register for signal <data<4>>.
+    Found 1-bit register for signal <data<3>>.
+    Found 1-bit register for signal <data<2>>.
+    Found 1-bit register for signal <data<1>>.
+    Found 1-bit register for signal <data<0>>.
+    Found 5-bit register for signal <pulse_old>.
+    Found 40-bit adder for signal <pulse_count[0][39]_GND_15_o_add_3_OUT> created at line 300.
+    Found 40-bit adder for signal <pulse_count[1][39]_GND_15_o_add_7_OUT> created at line 300.
+    Found 40-bit adder for signal <pulse_count[2][39]_GND_15_o_add_11_OUT> created at line 300.
+    Found 40-bit adder for signal <pulse_count[3][39]_GND_15_o_add_15_OUT> created at line 300.
+    Found 40-bit adder for signal <pulse_count[4][39]_GND_15_o_add_19_OUT> created at line 300.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred 245 D-type flip-flop(s).
+	inferred 400 Multiplexer(s).
+Unit <Sonar> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 3
+ 10x10-bit multiplier                                  : 1
+ 11x11-bit multiplier                                  : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 25
+ 10-bit adder                                          : 1
+ 10-bit addsub                                         : 3
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 7
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 1
+ 12-bit adder                                          : 2
+ 14-bit adder                                          : 1
+ 20-bit adder                                          : 1
+ 22-bit adder                                          : 1
+ 27-bit adder                                          : 1
+ 40-bit adder                                          : 5
+# Registers                                            : 74
+ 1-bit register                                        : 53
+ 10-bit register                                       : 4
+ 11-bit register                                       : 2
+ 14-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 3
+ 20-bit register                                       : 2
+ 200-bit register                                      : 1
+ 22-bit register                                       : 1
+ 26-bit register                                       : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 36
+ 1-bit comparator equal                                : 1
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 5
+ 11-bit comparator greater                             : 11
+ 11-bit comparator lessequal                           : 3
+ 12-bit comparator greater                             : 4
+ 22-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 424
+ 1-bit 2-to-1 multiplexer                              : 409
+ 10-bit 2-to-1 multiplexer                             : 6
+ 11-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 2
+ 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <rpixel_0> in Unit <round_puck> is equivalent to the following 7 FFs/Latches, which will be removed : <rpixel_1> <rpixel_2> <rpixel_3> <rpixel_4> <rpixel_5> <rpixel_6> <rpixel_7> 
+INFO:Xst:2261 - The FF/Latch <vsync_delay_0> in Unit <psolution> is equivalent to the following FF/Latch, which will be removed : <vsync_delayed> 
+WARNING:Xst:1710 - FF/Latch <paddle_pix_delay_0> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <paddle_pix_delay_1> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <paddle_pix_delay_2> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <paddle_pix_delay_3> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <paddle_pix_delay_4> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_8> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_9> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_10> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_11> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_12> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <debounce>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <debounce> synthesized (advanced).
+
+Synthesizing (advanced) Unit <display_4hex>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+INFO:Xst:3231 - The small RAM <Mram_counter[13]_PWR_13_o_wide_mux_23_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <counter>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <display_4hex> synthesized (advanced).
+
+Synthesizing (advanced) Unit <labkit>.
+The following registers are absorbed into counter <counter3>: 1 register on signal <counter3>.
+Unit <labkit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <round_piped>.
+	Multiplier <Mmult_x1[10]_x1[10]_MuLt_11_OUT> in block <round_piped> and adder/subtractor <Madd_x1square[21]_GND_10_o_add_16_OUT> in block <round_piped> are combined into a MAC<Maddsub_x1[10]_x1[10]_MuLt_11_OUT>.
+	The following registers are also absorbed by the MAC: <x1square> in block <round_piped>.
+	Found pipelined multiplier on signal <y1[9]_y1[9]_MuLt_12_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_y1[9]_y1[9]_MuLt_12_OUT by adding 1 register level(s).
+Unit <round_piped> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_general>.
+The following registers are absorbed into counter <hcount>: 1 register on signal <hcount>.
+The following registers are absorbed into counter <vcount>: 1 register on signal <vcount>.
+Unit <vga_general> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 11x11-to-22-bit MAC                                   : 1
+# Multipliers                                          : 2
+ 10x10-bit registered multiplier                       : 1
+ 6x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 19
+ 10-bit adder                                          : 1
+ 10-bit addsub                                         : 3
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 6
+ 11-bit addsub                                         : 1
+ 11-bit subtractor                                     : 1
+ 12-bit adder                                          : 1
+ 40-bit adder                                          : 5
+# Counters                                             : 5
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 14-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 348
+ Flip-Flops                                            : 348
+# Comparators                                          : 36
+ 1-bit comparator equal                                : 1
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 5
+ 11-bit comparator greater                             : 11
+ 11-bit comparator lessequal                           : 3
+ 12-bit comparator greater                             : 4
+ 22-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 424
+ 1-bit 2-to-1 multiplexer                              : 409
+ 10-bit 2-to-1 multiplexer                             : 6
+ 11-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 2
+ 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <vsync_delay_0> in Unit <pong_game> is equivalent to the following FF/Latch, which will be removed : <vsync_delayed> 
+INFO:Xst:2261 - The FF/Latch <rpixel_0> in Unit <round_piped> is equivalent to the following 7 FFs/Latches, which will be removed : <rpixel_1> <rpixel_2> <rpixel_3> <rpixel_4> <rpixel_5> <rpixel_6> <rpixel_7> 
+WARNING:Xst:2677 - Node <pulse_count_0_16> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_17> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_18> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_19> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_20> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_21> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_22> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_23> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_24> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_25> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_26> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_27> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_28> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_29> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_30> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_31> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_32> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_33> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_34> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_35> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_36> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_37> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_38> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_39> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_56> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_57> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_58> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_59> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_60> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_61> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_62> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_63> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_64> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_65> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_66> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_67> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_68> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_69> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_70> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_71> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_72> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_73> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_74> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_75> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_76> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_77> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_78> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_79> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_96> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_97> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_98> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_99> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_100> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_101> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_102> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_103> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_104> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_105> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_106> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_107> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_108> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_109> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_110> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_111> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_112> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_113> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_114> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_115> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_116> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_117> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_118> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_119> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_136> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_137> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_138> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_139> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_140> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_141> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_142> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_143> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_144> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_145> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_146> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_147> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_148> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_149> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_150> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_151> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_152> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_153> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_154> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_155> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_156> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_157> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_158> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_159> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_176> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_177> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_178> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_179> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_180> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_181> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_182> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_183> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_184> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_185> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_186> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_187> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_188> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_189> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_190> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_191> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_192> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_193> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_194> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_195> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_196> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_197> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_198> of sequential type is unconnected in block <Sonar>.
+WARNING:Xst:2677 - Node <pulse_count_0_199> of sequential type is unconnected in block <Sonar>.
+INFO:Xst:1901 - Instance my_clocks/DCM_inst in unit labkit of type DCM has been replaced by DCM_SP
+
+Optimizing unit <labkit> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <pong_game> ...
+
+Optimizing unit <draw_box1> ...
+
+Optimizing unit <round_piped> ...
+
+Optimizing unit <move_paddle> ...
+
+Optimizing unit <Sonar> ...
+
+Optimizing unit <vga_general> ...
+
+Optimizing unit <display_4hex> ...
+WARNING:Xst:1710 - FF/Latch <psolution/paddle_pix_delay_4> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <psolution/paddle_pix_delay_3> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <psolution/paddle_pix_delay_2> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <psolution/paddle_pix_delay_1> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <psolution/paddle_pix_delay_0> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <psolution/paddle_pix_delay_12> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <psolution/paddle_pix_delay_11> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <psolution/paddle_pix_delay_10> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <psolution/paddle_pix_delay_9> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <psolution/paddle_pix_delay_8> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Sonar1/data_8> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_9> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_10> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_11> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_12> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_13> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_16> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_17> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_18> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_19> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_20> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_22> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_23> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_21> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_24> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_25> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_26> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_27> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_29> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_28> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_32> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_33> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_34> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_36> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_37> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/data_35> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_95> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_94> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_93> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_92> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_91> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_90> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_89> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_88> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_87> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_86> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_85> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_84> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_83> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_82> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_81> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_80> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:2677 - Node <Sonar1/pulse_old_2> of sequential type is unconnected in block <labkit>.
+WARNING:Xst:1710 - FF/Latch <db_enter/count_19> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <psolution/paddle_pix_delay_7> in Unit <labkit> is equivalent to the following 2 FFs/Latches, which will be removed : <psolution/paddle_pix_delay_6> <psolution/paddle_pix_delay_5> 
+INFO:Xst:2261 - The FF/Latch <psolution/ball_x_1> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <psolution/ball_x_0> 
+INFO:Xst:2261 - The FF/Latch <psolution/ball_y_1> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <psolution/ball_up> 
+INFO:Xst:2261 - The FF/Latch <video_driver/hcount_0> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <my_display/counter_0> 
+INFO:Xst:2261 - The FF/Latch <video_driver/hcount_1> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <my_display/counter_1> 
+INFO:Xst:2261 - The FF/Latch <video_driver/hcount_2> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <my_display/counter_2> 
+INFO:Xst:2261 - The FF/Latch <video_driver/hcount_3> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <my_display/counter_3> 
+INFO:Xst:2261 - The FF/Latch <video_driver/hcount_4> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <my_display/counter_4> 
+INFO:Xst:2261 - The FF/Latch <video_driver/hcount_5> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <my_display/counter_5> 
+INFO:Xst:2261 - The FF/Latch <rgb_0> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <rgb_1> 
+INFO:Xst:2261 - The FF/Latch <rgb_2> in Unit <labkit> is equivalent to the following 2 FFs/Latches, which will be removed : <rgb_3> <rgb_4> 
+INFO:Xst:2261 - The FF/Latch <rgb_5> in Unit <labkit> is equivalent to the following 2 FFs/Latches, which will be removed : <rgb_6> <rgb_7> 
+INFO:Xst:2261 - The FF/Latch <psolution/paddle_pix_delay_15> in Unit <labkit> is equivalent to the following 2 FFs/Latches, which will be removed : <psolution/paddle_pix_delay_14> <psolution/paddle_pix_delay_13> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block labkit, actual ratio is 8.
+FlipFlop psolution/ball_y_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <labkit> :
+	Found 2-bit shift register for signal <psolution/hsync_delay_1>.
+Unit <labkit> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 229
+ Flip-Flops                                            : 229
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : labkit.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 949
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 136
+#      LUT2                        : 64
+#      LUT3                        : 95
+#      LUT4                        : 127
+#      LUT5                        : 47
+#      LUT6                        : 64
+#      MUXCY                       : 221
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 179
+# FlipFlops/Latches                : 230
+#      FD                          : 114
+#      FDE                         : 18
+#      FDR                         : 37
+#      FDRE                        : 40
+#      FDS                         : 1
+#      FDSE                        : 20
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 44
+#      IBUF                        : 13
+#      IBUFG                       : 1
+#      OBUF                        : 30
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 2
+#      DSP48A1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             230  out of  18224     1%  
+ Number of Slice LUTs:                  546  out of   9112     5%  
+    Number used as Logic:               545  out of   9112     5%  
+    Number used as Memory:                1  out of   2176     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    588
+   Number with an unused Flip Flop:     358  out of    588    60%  
+   Number with an unused LUT:            42  out of    588     7%  
+   Number of fully used LUT-FF pairs:   188  out of    588    31%  
+   Number of unique control sets:        18
+
+IO Utilization: 
+ Number of IOs:                         116
+ Number of bonded IOBs:                  44  out of    232    18%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                      2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_100mhz                         | IBUFG+BUFG             | 27    |
+clk_100mhz                         | DCM_SP:CLKFX           | 124   |
+SonarClk                           | BUFG                   | 82    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.961ns (Maximum Frequency: 201.574MHz)
+   Minimum input arrival time before clock: 6.328ns
+   Maximum output required time after clock: 4.627ns
+   Maximum combinational path delay: 4.595ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_100mhz'
+  Clock period: 4.961ns (frequency: 201.574MHz)
+  Total number of paths / destination ports: 21274 / 347
+-------------------------------------------------------------------------
+Delay:               7.632ns (Levels of Logic = 16)
+  Source:            psolution/ball_y_2 (FF)
+  Destination:       psolution/round_puck/Mmult_y1[9]_y1[9]_MuLt_12_OUT (DSP)
+  Source Clock:      clk_100mhz rising 0.6X
+  Destination Clock: clk_100mhz rising 0.6X
+
+  Data Path: psolution/ball_y_2 to psolution/round_puck/Mmult_y1[9]_y1[9]_MuLt_12_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              20   0.447   1.321  psolution/ball_y_2 (psolution/ball_y_2)
+     LUT4:I1->O            1   0.205   0.000  psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_lut<1> (psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<1> (psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<2> (psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<3> (psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<3>)
+     MUXCY:CI->O           9   0.213   0.830  psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<4> (psolution/round_puck/Mcompar_ry[9]_vcount[9]_LessThan_7_o_cy<4>)
+     LUT3:I2->O            0   0.205   0.000  psolution/round_puck/Mmux_y1_A11 (psolution/round_puck/Mmux_y1_rs_A<0>)
+     MUXCY:DI->O           1   0.145   0.000  psolution/round_puck/Mmux_y1_rs_cy<0> (psolution/round_puck/Mmux_y1_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<1> (psolution/round_puck/Mmux_y1_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<2> (psolution/round_puck/Mmux_y1_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<3> (psolution/round_puck/Mmux_y1_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<4> (psolution/round_puck/Mmux_y1_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<5> (psolution/round_puck/Mmux_y1_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<6> (psolution/round_puck/Mmux_y1_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<7> (psolution/round_puck/Mmux_y1_rs_cy<7>)
+     MUXCY:CI->O           0   0.019   0.000  psolution/round_puck/Mmux_y1_rs_cy<8> (psolution/round_puck/Mmux_y1_rs_cy<8>)
+     XORCY:CI->O           2   0.180   0.616  psolution/round_puck/Mmux_y1_rs_xor<9> (psolution/round_puck/y1<9>)
+     DSP48A1:B9                3.108          psolution/round_puck/Mmult_y1[9]_y1[9]_MuLt_12_OUT
+    ----------------------------------------
+    Total                      7.632ns (4.865ns logic, 2.767ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SonarClk'
+  Clock period: 2.905ns (frequency: 344.193MHz)
+  Total number of paths / destination ports: 636 / 92
+-------------------------------------------------------------------------
+Delay:               2.905ns (Levels of Logic = 1)
+  Source:            Sonar1/pulse_old_0 (FF)
+  Destination:       Sonar1/data_1 (FF)
+  Source Clock:      SonarClk rising
+  Destination Clock: SonarClk rising
+
+  Data Path: Sonar1/pulse_old_0 to Sonar1/data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              17   0.447   1.132  Sonar1/pulse_old_0 (Sonar1/pulse_old_0)
+     LUT2:I0->O            8   0.203   0.802  Sonar1/_n0713_inv1 (Sonar1/_n0713_inv)
+     FDE:CE                    0.322          Sonar1/data_7
+    ----------------------------------------
+    Total                      2.905ns (0.972ns logic, 1.933ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100mhz'
+  Total number of paths / destination ports: 435 / 50
+-------------------------------------------------------------------------
+Offset:              6.328ns (Levels of Logic = 9)
+  Source:            switch<6> (PAD)
+  Destination:       psolution/ball_x_3 (FF)
+  Destination Clock: clk_100mhz rising 0.6X
+
+  Data Path: switch<6> to psolution/ball_x_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  switch_6_IBUF (led_6_OBUF)
+     LUT3:I1->O            1   0.203   0.000  psolution/Maddsub_new_ball_x_lut<2> (psolution/Maddsub_new_ball_x_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  psolution/Maddsub_new_ball_x_cy<2> (psolution/Maddsub_new_ball_x_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  psolution/Maddsub_new_ball_x_cy<3> (psolution/Maddsub_new_ball_x_cy<3>)
+     XORCY:CI->O           5   0.180   0.819  psolution/Maddsub_new_ball_x_xor<4> (psolution/new_ball_x<4>)
+     LUT2:I0->O            1   0.203   0.580  psolution/_n01401_SW0 (N17)
+     LUT6:I5->O            4   0.205   0.912  psolution/_n01401 (psolution/_n01401)
+     LUT6:I3->O            1   0.205   0.580  psolution/Mmux_new_ball_x[10]_GND_7_o_mux_36_OUT41 (psolution/new_ball_x[10]_GND_7_o_mux_36_OUT<2>)
+     LUT4:I3->O            1   0.205   0.000  psolution/ball_x_2_glue_rst (psolution/ball_x_2_glue_rst)
+     FD:D                      0.102          psolution/ball_x_2
+    ----------------------------------------
+    Total                      6.328ns (2.716ns logic, 3.612ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SonarClk'
+  Total number of paths / destination ports: 82 / 82
+-------------------------------------------------------------------------
+Offset:              3.600ns (Levels of Logic = 2)
+  Source:            jc<0> (PAD)
+  Destination:       Sonar1/data_1 (FF)
+  Destination Clock: SonarClk rising
+
+  Data Path: jc<0> to Sonar1/data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.050  jc_0_IBUF (jc_0_IBUF)
+     LUT2:I1->O            8   0.205   0.802  Sonar1/_n0713_inv1 (Sonar1/_n0713_inv)
+     FDE:CE                    0.322          Sonar1/data_7
+    ----------------------------------------
+    Total                      3.600ns (1.749ns logic, 1.851ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_100mhz'
+  Total number of paths / destination ports: 29 / 21
+-------------------------------------------------------------------------
+Offset:              4.627ns (Levels of Logic = 2)
+  Source:            b (FF)
+  Destination:       vgared<2> (PAD)
+  Source Clock:      clk_100mhz rising 0.6X
+
+  Data Path: b to vgared<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.755  b (b)
+     LUT2:I0->O            3   0.203   0.650  Mmux_vgared31 (vgared_0_OBUF)
+     OBUF:I->O                 2.571          vgared_0_OBUF (vgared<0>)
+    ----------------------------------------
+    Total                      4.627ns (3.221ns logic, 1.405ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.595ns (Levels of Logic = 2)
+  Source:            switch<1> (PAD)
+  Destination:       led<1> (PAD)
+
+  Data Path: switch<1> to led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.802  switch_1_IBUF (led_1_OBUF)
+     OBUF:I->O                 2.571          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      4.595ns (3.793ns logic, 0.802ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock SonarClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SonarClk       |    2.905|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_100mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SonarClk       |    2.688|         |         |         |
+clk_100mhz     |    7.632|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 24.84 secs
+ 
 --> 
 
-Total memory usage is 194864 kilobytes
+Total memory usage is 234004 kilobytes
 
-Number of errors   :   12 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  218 (   0 filtered)
+Number of infos    :   23 (   0 filtered)
 

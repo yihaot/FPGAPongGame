@@ -5,40 +5,727 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="1660" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 189: Procedural assignment to a non-register <arg fmt="%s" index="1">led</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 75: Assignment to <arg fmt="%s" index="1">clk_100mhz_buf</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="error" file="HDLCompiler" num="1660" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 189: Procedural assignment to a non-register <arg fmt="%s" index="1">led</arg> is not permitted, left-hand side should be reg/integer/time/genvar
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 902: Result of <arg fmt="%d" index="1">21</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 21: Module &lt;<arg fmt="%s" index="1">labkit</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 871: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 236: Module &lt;<arg fmt="%s" index="1">pong_game</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 872: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 470: Module &lt;<arg fmt="%s" index="1">draw_box1</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 107: Assignment to <arg fmt="%s" index="1">hblank1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 505: Module &lt;<arg fmt="%s" index="1">move_paddle</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 583: Signal &lt;<arg fmt="%s" index="1">xA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 571: Module &lt;<arg fmt="%s" index="1">move_paddle_extended</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 414: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">xA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">11</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 646: Module &lt;<arg fmt="%s" index="1">round_piped</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 632: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 698: Module &lt;<arg fmt="%s" index="1">vga_general</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 635: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 780: Module &lt;<arg fmt="%s" index="1">debounce</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 646: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 813: Module &lt;<arg fmt="%s" index="1">display_4hex</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 649: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 890: Module &lt;<arg fmt="%s" index="1">dcm_all_v2</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 493: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">ball_size</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">7</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 435: Net &lt;<arg fmt="%s" index="1">system_reset</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 197: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">31</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 943: Result of <arg fmt="%d" index="1">15</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 204: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">data</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 269: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 308: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 309: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">jc&lt;7:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">jd</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn_up</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">btn_left</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn_down</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">btn_right</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">73</arg>: Output port &lt;<arg fmt="%s" index="3">CLKSYS</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">my_clocks</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">106</arg>: Output port &lt;<arg fmt="%s" index="3">hblank</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">video_driver</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">system_reset</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">pixel_clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ball_size&lt;7:7&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">rpixel_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">round_puck</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rpixel_1&gt; &lt;rpixel_2&gt; &lt;rpixel_3&gt; &lt;rpixel_4&gt; &lt;rpixel_5&gt; &lt;rpixel_6&gt; &lt;rpixel_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vsync_delay_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">psolution</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vsync_delayed&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">paddle_pix_delay_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">psolution</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_counter[13]_PWR_13_o_wide_mux_23_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="2385" delta="old" >HDL ADVISOR - You can improve the performance of the multiplier <arg fmt="%s" index="1">Mmult_y1[9]_y1[9]_MuLt_12_OUT</arg> by adding <arg fmt="%d" index="2">1</arg> register level(s).
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">vsync_delay_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">pong_game</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;vsync_delayed&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">rpixel_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">round_piped</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rpixel_1&gt; &lt;rpixel_2&gt; &lt;rpixel_3&gt; &lt;rpixel_4&gt; &lt;rpixel_5&gt; &lt;rpixel_6&gt; &lt;rpixel_7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_56</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_57</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_58</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_59</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_60</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_61</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_62</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_63</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_64</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_65</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_66</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_67</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_68</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_69</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_70</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_71</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_72</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_73</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_74</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_75</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_76</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_77</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_78</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_79</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_96</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_97</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_98</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_99</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_100</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_101</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_102</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_103</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_104</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_105</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_106</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_107</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_108</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_109</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_110</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_111</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_112</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_113</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_114</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_115</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_116</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_117</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_118</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_119</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_136</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_137</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_138</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_139</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_140</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_141</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_142</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_143</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_144</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_145</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_146</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_147</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_148</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_149</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_150</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_151</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_152</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_153</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_154</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_155</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_156</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_157</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_158</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_159</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_176</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_177</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_178</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_179</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_180</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_181</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_182</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_183</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_184</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_185</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_186</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_187</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_188</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_189</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_190</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_191</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_192</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_193</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_194</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_195</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_196</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_197</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_198</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">pulse_count_0_199</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Sonar</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">my_clocks/DCM_inst</arg> in unit <arg fmt="%s" index="2">labkit</arg> of type <arg fmt="%s" index="3">DCM</arg> has been replaced by <arg fmt="%s" index="4">DCM_SP</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_12</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_95</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_94</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_93</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_92</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_91</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_90</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_89</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_88</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_87</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_86</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_85</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_84</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_83</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_82</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_81</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_80</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_old_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">db_enter/count_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;psolution/paddle_pix_delay_6&gt; &lt;psolution/paddle_pix_delay_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">psolution/ball_x_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;psolution/ball_x_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">psolution/ball_y_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;psolution/ball_up&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">video_driver/hcount_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;my_display/counter_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">video_driver/hcount_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;my_display/counter_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">video_driver/hcount_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;my_display/counter_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">video_driver/hcount_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;my_display/counter_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">video_driver/hcount_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;my_display/counter_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">video_driver/hcount_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;my_display/counter_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">rgb_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rgb_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">rgb_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rgb_3&gt; &lt;rgb_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">rgb_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;rgb_6&gt; &lt;rgb_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;psolution/paddle_pix_delay_14&gt; &lt;psolution/paddle_pix_delay_13&gt; </arg>
 </msg>
 
 </messages>
