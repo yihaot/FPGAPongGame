@@ -5,79 +5,115 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 163: Using initial value of <arg fmt="%s" index="1">x_one</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 164: Using initial value of <arg fmt="%s" index="1">x_two</arg> since it is never assigned
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 75: Assignment to <arg fmt="%s" index="1">clk_100mhz_buf</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 902: Result of <arg fmt="%d" index="1">21</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 1116: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 871: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 872: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 1117: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 107: Assignment to <arg fmt="%s" index="1">hblank1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 583: Signal &lt;<arg fmt="%s" index="1">xA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 828: Signal &lt;<arg fmt="%s" index="1">xA</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 414: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">xA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">11</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 652: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">xA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">11</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 632: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 877: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 635: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 880: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 646: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 891: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 649: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 894: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 493: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">ball_size</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">7</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 732: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">ball_size</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">7</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 435: Net &lt;<arg fmt="%s" index="1">system_reset</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 742: Assignment to <arg fmt="%s" index="1">rst1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 197: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">31</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 672: Net &lt;<arg fmt="%s" index="1">system_reset</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 943: Result of <arg fmt="%d" index="1">15</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 399: Using initial value of <arg fmt="%s" index="1">COLOR</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 204: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">data</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 403: Using initial value of <arg fmt="%s" index="1">y</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 269: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 172: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">x</arg>&gt;. Formal port size is <arg fmt="%d" index="2">10</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 308: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 175: Assignment to <arg fmt="%s" index="1">score1_pixel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: case condition never applies
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 176: Assignment to <arg fmt="%s" index="1">over</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: case condition never applies
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 186: Assignment to <arg fmt="%s" index="1">score2_pixel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: case condition never applies
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 187: Assignment to <arg fmt="%s" index="1">over</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 309: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 238: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">31</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 1188: Result of <arg fmt="%d" index="1">15</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 245: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">data</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 349: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 351: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 352: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 353: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 350: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 351: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 352: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 353: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 159: Net &lt;<arg fmt="%s" index="1">win_rst1</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%d" index="2">168</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">score1</arg>&gt; of block &lt;<arg fmt="%s" index="4">draw_score</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">labkit</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%d" index="2">179</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">score2</arg>&gt; of block &lt;<arg fmt="%s" index="4">draw_score</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">labkit</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">jc&lt;7:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -89,19 +125,46 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn_up</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">btn_left</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn_enter</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn_left</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn_down</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">btn_right</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">btn_right</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">73</arg>: Output port &lt;<arg fmt="%s" index="3">CLKSYS</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">my_clocks</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">106</arg>: Output port &lt;<arg fmt="%s" index="3">hblank</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">video_driver</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">168</arg>: Output port &lt;<arg fmt="%s" index="3">pixel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">score1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">168</arg>: Output port &lt;<arg fmt="%s" index="3">over</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">score1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">179</arg>: Output port &lt;<arg fmt="%s" index="3">pixel</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">score2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v</arg>&quot; line <arg fmt="%s" index="2">179</arg>: Output port &lt;<arg fmt="%s" index="3">over</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">score2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">win_rst1</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">win_rst2</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">win_rst1</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">win_rst2</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">system_reset</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -569,12 +632,6 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
 </msg>
 
@@ -585,18 +642,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
@@ -611,12 +656,6 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
 </msg>
 
@@ -626,67 +665,7 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Sonar1/data_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_95</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_94</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_93</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_92</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_91</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_90</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_89</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_88</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_87</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_86</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_85</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_84</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_83</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_82</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_81</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_count_0_80</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Sonar1/pulse_old_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">labkit</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">db_enter/count_19</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">labkit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">psolution/paddle_pix_delay_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">labkit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;psolution/paddle_pix_delay_6&gt; &lt;psolution/paddle_pix_delay_5&gt; </arg>

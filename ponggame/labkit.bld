@@ -26,7 +26,6 @@ Checking expanded design ...
 WARNING:NgdBuild:470 - bidirect pad net 'jc<7>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jc<6>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'jc<5>' has no legal driver
-WARNING:NgdBuild:470 - bidirect pad net 'jc<2>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'ja<7>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'ja<6>' has no legal driver
 WARNING:NgdBuild:470 - bidirect pad net 'ja<5>' has no legal driver
@@ -93,7 +92,7 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:  61
+  Number of warnings:  60
 
 Total memory usage is 154536 kilobytes
 

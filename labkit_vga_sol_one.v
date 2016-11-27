@@ -99,7 +99,7 @@ module labkit(
 //	debounce  db_down(.reset(reset), .clock(pixel_clk), .noisy(btn_down), .clean(down));
 	// debounce  db_left(.reset(reset), .clock(pixel_clk), .noisy(btn_left), .clean(left));			 
 	// debounce  db_right(.reset(reset), .clock(pixel_clk), .noisy(btn_right), .clean(right));    
-	debounce  db_enter(.reset(1'b0), .clock(pixel_clk), .noisy(btn_enter), .clean(enter)); 
+	//debounce  db_enter(.reset(1'b0), .clock(pixel_clk), .noisy(btn_enter), .clean(enter)); 
 	
    assign reset = enter;
 	
@@ -156,37 +156,78 @@ module labkit(
 	
    pong_game psolution(.pixel_clk(pixel_clk), .reset(reset), .up(up), .down(down),.left(left), .right(right), .pspeed(switch[7:4]),
 	    .hcount(hcount), .vcount(vcount), .hsync(hsync1), .vsync(vsync1), .blank(blank1),
-		 .phsync(phsync), .pvsync(pvsync), .pblank(pblank), .pixel(pong_pixel));
+		 .phsync(phsync), .pvsync(pvsync), .pblank(pblank),.win_rst1(win_rst1),.win_rst2(win_rst2), .pixel(pong_pixel));
+
+wire [7:0]	 score1_pixel;
+wire [7:0]	 score2_pixel;
+reg [7:0]	 x_one = 170;
+reg [9:0]	 x_two = 570;
+//reg win_rst1;
+//reg win_rst2;
+//for score//
+draw_score score1(
+			 .win_rst(win_rst1),
+			 .hcount(hcount),
+			 .vcount(vcount),
+			 .x(x_one),
+			 .clk(pixel_clk),
+			 .rst(reset),
+			 .pixel(score1_pixel), //unknown
+			 .over(over) //unknown
+		);
+
+draw_score score2(
+			 .win_rst(win_rst2),
+			 .hcount(hcount),
+			 .vcount(vcount),
+			 .x(x_two),
+			 .clk(pixel_clk),
+			 .rst(reset),
+			 .pixel(score2_pixel),
+			 .over(over)
+		);
+
+
+
 
 reg uptrack = 0;
 reg downtrack = 0;
 reg lefttrack = 0;
 reg righttrack = 0;
+reg resettrack = 0;
+
+
+
 
 
 always @(posedge pixel_clk) begin
-if ((pulse_width[7:0]) < 8'b01000000)
+if ((pulse_width[31:24]) < 8'b00010000) //01000000
 uptrack <= 1;
 else
 uptrack <= 0;
-if ((pulse_width[15:8]) < 8'b01000000)
+if ((pulse_width[39:32]) < 8'b00010000)
 downtrack <= 1;
 else
 downtrack <= 0;
-if ((pulse_width[31:24]) < 8'b01000000)
+if ((pulse_width[7:0]) < 8'b00010000)
 lefttrack <= 1;
 else
 lefttrack <= 0;
-if ((pulse_width[39:32]) < 8'b01000000)
+if ((pulse_width[23:16]) < 8'b00010000)
 righttrack <= 1;
 else
 righttrack <= 0;
+ if ((pulse_width[15:8]) < 8'b00010000)
+resettrack <= 1;
+else
+resettrack <= 0;
  end
 
 assign up = uptrack;
 assign down = downtrack;
 assign left = lefttrack;
 assign right = righttrack;
+assign enter = resettrack;
 
 //////////////////////////////////////////////////////////////////
 // 
@@ -326,6 +367,201 @@ module Sonar(input clock, input [4:0]pulse, output reg [39:0] data);
 
 endmodule
 
+
+
+module draw_score #(parameter WIDTH = 10,   // default width: 10 pixels
+               HEIGHT = 40)(                // default height: 40 pixels  
+		win_rst,
+		hcount,
+		vcount,
+		x,
+		clk,
+		rst,
+		pixel,
+		over
+);
+
+// ====================================================================================
+// 										Port Declarations
+// ====================================================================================
+	input [10:0] hcount;
+	input [9:0]  vcount;
+	input	[9:0]	 x;
+	input			 win_rst;
+	input 		 clk;
+	input			 rst;
+	output [7:0] pixel;
+	output		 over;
+
+// ====================================================================================
+// 								Parameters, Register, and Wires
+// ====================================================================================
+	reg [7:0]	 COLOR = 8'b111_000_00;//8'hCF;
+	reg			 over;
+	reg [3:0]	 NUMBER = 0;
+	reg [7:0] 	 pixel;
+	reg [9:0]  	 y = 50;
+
+//  ===================================================================================
+// 							  				Implementation
+//  ===================================================================================
+
+		always @(posedge clk) 
+		begin
+								if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+							 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + WIDTH) && vcount < (y + 2*WIDTH + HEIGHT))) || //upper left vertical line
+							 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower left vertical line
+							 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) || //lower horizontal line
+							 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + 2*WIDTH + HEIGHT))) || //upper right vertical line
+							 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) //lower right vertical line
+							)
+							pixel <= COLOR;
+						else 
+							pixel <= 8'b0;
+			// if (rst == 1)
+			// begin
+			// 	NUMBER <= 0;
+			// 	over <= 0;
+			// end
+			// else
+				//if (win_rst == 1)
+				// begin
+				// 	NUMBER <= NUMBER + 1;
+				// 	if (NUMBER >= 9)
+				// 	begin
+				// 		over <= 1;
+				// 		NUMBER <= 0;
+				// 	end
+				// 	else
+				// 		over <= over;
+				// end
+				// else
+				//	NUMBER <= NUMBER;
+
+				//case (NUMBER)
+				// 	0:
+				// 		//If the count is 0 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + WIDTH) && vcount < (y + 2*WIDTH + HEIGHT))) || //upper left vertical line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower left vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) || //lower horizontal line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + 2*WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) //lower right vertical line
+				// 			)
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	1:
+				// 		//If the count is 1 draw it
+				// 		if (((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + 2*WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) //lower right vertical line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	2:
+				// 		//If the count is 2 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + HEIGHT))) || //middle vertical line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower left vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) //lower horizontal line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	3:
+				// 		//If the count is 3 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + HEIGHT))) || //middle vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower right vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) //lower horizontal line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	4:
+				// 		//If the count is 4 draw it
+				// 		if (((hcount >= x && hcount < (x + WIDTH)) && (vcount >= y && vcount < (y + WIDTH + HEIGHT))) || //upper left vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + HEIGHT))) || //middle vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) //lower right vertical line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	5:
+				// 		//If the count is 5 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper left vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + HEIGHT))) || //middle vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower right vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) //lower horizontal line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	6:
+				// 		//If the count is 6 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper left vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + HEIGHT))) || //middle vertical line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower left vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower right vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) //lower horizontal line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	7:
+				// 		//If the count is 7 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + 2*WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) //lower right vertical line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	8:
+				// 		//If the count is 8 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper left vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + HEIGHT))) || //middle vertical line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower left vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) || //lower horizontal line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) //lower right vertical line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	9:
+				// 		//If the count is 9 draw it
+				// 		if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper left vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + HEIGHT))) || //middle vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) //lower right vertical line
+				// 			 )
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// 	default:
+				// 								if (((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= y && vcount < (y + WIDTH))) || //upper horizontal line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + WIDTH) && vcount < (y + 2*WIDTH + HEIGHT))) || //upper left vertical line
+				// 			 ((hcount >= x && hcount < (x + WIDTH)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) || //lower left vertical line
+				// 			 ((hcount >= x && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + 2*HEIGHT) && vcount < (y + 3*WIDTH + 2*HEIGHT))) || //lower horizontal line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + WIDTH) && vcount < (y + 2*WIDTH + HEIGHT))) || //upper right vertical line
+				// 			 ((hcount >= (x + WIDTH + HEIGHT) && hcount < (x + 2*WIDTH + HEIGHT)) && (vcount >= (y + 2*WIDTH + HEIGHT) && vcount < (y + 2*WIDTH + 2*HEIGHT))) //lower right vertical line
+				// 			)
+				// 			pixel <= COLOR;
+				// 		else 
+				// 			pixel <= 8'b0;
+				// endcase
+		end
+	
+endmodule
 ////////////////////////////////////////////////////////////////////////////////
 //
 // pong_game: the game itself!
@@ -346,6 +582,8 @@ module pong_game (
    input hsync,		// XVGA horizontal sync signal (active low)
    input vsync,		// XVGA vertical sync signal (active low)
    input blank,		// XVGA blanking (1 means output black pixel)
+	input win_rst1,
+	input win_rst2,
  	
    output phsync,	// pong game's horizontal sync
    output pvsync,	// pong game's vertical sync
@@ -414,7 +652,6 @@ module pong_game (
 		.xA(PADDLE_XA), .yA(paddle_yA),.xB(PADDLE_XB), .yB(paddle_yB), .pixel(paddle_pix));
 		
 
-
 //////////////////////////////////////////////////////////////////
 // create a pulse every vertical refresh
 
@@ -466,15 +703,17 @@ module pong_game (
 //	reg [9:0] scoreB = 0;  //initialises the score 
 //
 //
-//   if ((ball_x + 1 < PADDLE_XA + PADDLE_WIDTH)) begin //A loses
+//  if (((ball_x + 1) < (PADDLE_XA + PADDLE_WIDTH))) begin //A loses
 //   //assign scoreB = scoreB + 1;
 //   assign stop = 1;
-//   end
+//assign win_rst2 = ((ball_x + 1) < (PADDLE_XA + PADDLE_WIDTH));//1;
+//  end
 //   
-//   if (ball_x + 1 > PADDLE_XB + PADDLE_WIDTH) begin //B loses
+  // if ((ball_x + 1) > (PADDLE_XB + PADDLE_WIDTH)) begin //B loses
 //   //assign scoreA = scoreA + 1;
 //	assign stop = 1;
-//   end
+//assign win_rst1 = ((ball_x + 1) > (PADDLE_XB + PADDLE_WIDTH));//1;
+  // end
 
 //////////////////////////////////////////////////////////////////	
 // use to draw a square puck
@@ -494,7 +733,11 @@ module pong_game (
 	   .hcount(hcount), .ry(ball_y), .vcount(vcount), .rpixel(ball));
 ////
 //////////////////////////////////////////////////////////////////
+reg rst1;
+reg rst2;
 
+//assign win_rst1 = rst1;
+//assign win_rst2 = rst2;
 
 	always @(posedge pixel_clk)
 		if (reset) begin
@@ -504,6 +747,8 @@ module pong_game (
 			ball_y <= 400; //starting Y position of ball
 			ball_up <= 0; //
 			ball_right <= 1;
+			rst1 <= 0;
+			rst2 <= 0;
 //			scoreA <= 0;
 //			scoreB <= 0;
 			end

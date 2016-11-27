@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.33 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> Reading design: labkit.prj
 
@@ -108,6 +108,7 @@ Slice Utilization Ratio Delta      : 5
 Analyzing Verilog file "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" into library work
 Parsing module <labkit>.
 Parsing module <Sonar>.
+Parsing module <draw_score>.
 Parsing module <pong_game>.
 Parsing module <draw_box1>.
 Parsing module <move_paddle>.
@@ -123,6 +124,8 @@ Parsing module <dcm_all_v2>.
 =========================================================================
 
 Elaborating module <labkit>.
+WARNING:HDLCompiler:872 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 163: Using initial value of x_one since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 164: Using initial value of x_two since it is never assigned
 
 Elaborating module <dcm_all_v2(DCM_DIVIDE=20,DCM_MULTIPLY=13)>.
 
@@ -131,45 +134,55 @@ Elaborating module <BUFG>.
 Elaborating module <DCM(CLK_FEEDBACK="1X",CLKDV_DIVIDE=4.0,CLKFX_DIVIDE=20,CLKFX_MULTIPLY=13,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10000.0,CLKOUT_PHASE_SHIFT="NONE",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",DFS_FREQUENCY_MODE="LOW",DLL_FREQUENCY_MODE="LOW",DUTY_CYCLE_CORRECTION="TRUE",FACTORY_JF=16'b1100000010000000,PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
 WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 75: Assignment to clk_100mhz_buf ignored, since the identifier is never used
 
-Elaborating module <debounce>.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 902: Result of 21-bit expression is truncated to fit in 20-bit target.
-
 Elaborating module <vga_general>.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 871: Result of 32-bit expression is truncated to fit in 11-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 872: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 1116: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 1117: Result of 32-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 107: Assignment to hblank1 ignored, since the identifier is never used
 
 Elaborating module <pong_game>.
 
 Elaborating module <draw_box1(WIDTH=16,HEIGHT=256,COLOR=8'b11100000)>.
-WARNING:HDLCompiler:91 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 583: Signal <xA> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 414: Size mismatch in connection of port <xA>. Formal port size is 11-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:91 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 828: Signal <xA> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 652: Size mismatch in connection of port <xA>. Formal port size is 11-bit while actual signal size is 32-bit.
 
 Elaborating module <move_paddle>.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 632: Result of 32-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 635: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 646: Result of 32-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 649: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 877: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 880: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 891: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 894: Result of 11-bit expression is truncated to fit in 10-bit target.
 
 Elaborating module <round_piped>.
-WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 493: Size mismatch in connection of port <ball_size>. Formal port size is 8-bit while actual signal size is 7-bit.
-WARNING:HDLCompiler:634 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 435: Net <system_reset> does not have a driver.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 197: Result of 32-bit expression is truncated to fit in 31-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 732: Size mismatch in connection of port <ball_size>. Formal port size is 8-bit while actual signal size is 7-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 742: Assignment to rst1 ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 672: Net <system_reset> does not have a driver.
+
+Elaborating module <draw_score>.
+WARNING:HDLCompiler:872 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 399: Using initial value of COLOR since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 403: Using initial value of y since it is never assigned
+WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 172: Size mismatch in connection of port <x>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 175: Assignment to score1_pixel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 176: Assignment to over ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 186: Assignment to score2_pixel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 187: Assignment to over ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 238: Result of 32-bit expression is truncated to fit in 31-bit target.
 
 Elaborating module <display_4hex>.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 943: Result of 15-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 204: Size mismatch in connection of port <data>. Formal port size is 16-bit while actual signal size is 8-bit.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 269: Result of 32-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 1188: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 245: Size mismatch in connection of port <data>. Formal port size is 16-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: Result of 32-bit expression is truncated to fit in 26-bit target.
 
 Elaborating module <Sonar>.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 308: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: case condition never applies
-WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: case condition never applies
-WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: case condition never applies
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 309: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 310: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 311: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 312: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 349: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 351: case condition never applies
+WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 352: case condition never applies
+WARNING:HDLCompiler:295 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 353: case condition never applies
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 350: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 351: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 352: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 353: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" Line 159: Net <win_rst1> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 168. All outputs of instance <score1> of block <draw_score> are unconnected in block <labkit>. Underlying logic will be removed.
+WARNING:Xst:2972 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 179. All outputs of instance <score2> of block <draw_score> are unconnected in block <labkit>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -180,11 +193,18 @@ Synthesizing Unit <labkit>.
 WARNING:Xst:647 - Input <jc<7:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <jd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <btn_up> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn_enter> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <btn_left> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <btn_down> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <btn_right> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 73: Output port <CLKSYS> of the instance <my_clocks> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 106: Output port <hblank> of the instance <video_driver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 168: Output port <pixel> of the instance <score1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 168: Output port <over> of the instance <score1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 179: Output port <pixel> of the instance <score2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v" line 179: Output port <over> of the instance <score2> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <win_rst1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <win_rst2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <vsync>.
     Found 1-bit register for signal <b>.
     Found 8-bit register for signal <rgb>.
@@ -192,19 +212,21 @@ INFO:Xst:3210 - "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_on
     Found 1-bit register for signal <downtrack>.
     Found 1-bit register for signal <lefttrack>.
     Found 1-bit register for signal <righttrack>.
+    Found 1-bit register for signal <resettrack>.
     Found 26-bit register for signal <counter3>.
     Found 1-bit register for signal <SonarClk>.
     Found 1-bit register for signal <hsync>.
-    Found 27-bit adder for signal <n0075[26:0]> created at line 269.
+    Found 27-bit adder for signal <n0078[26:0]> created at line 310.
     Found 8-bit 4-to-1 multiplexer for signal <switch[1]_pong_pixel[7]_wide_mux_12_OUT> created at line 118.
-    Found 8-bit comparator greater for signal <pulse_width[7]_GND_1_o_LessThan_17_o> created at line 168
-    Found 8-bit comparator greater for signal <pulse_width[15]_GND_1_o_LessThan_18_o> created at line 172
-    Found 8-bit comparator greater for signal <pulse_width[31]_GND_1_o_LessThan_19_o> created at line 176
-    Found 8-bit comparator greater for signal <pulse_width[39]_GND_1_o_LessThan_20_o> created at line 180
+    Found 8-bit comparator greater for signal <pulse_width[31]_GND_1_o_LessThan_17_o> created at line 204
+    Found 8-bit comparator greater for signal <pulse_width[39]_GND_1_o_LessThan_18_o> created at line 208
+    Found 8-bit comparator greater for signal <pulse_width[7]_GND_1_o_LessThan_19_o> created at line 212
+    Found 8-bit comparator greater for signal <pulse_width[23]_GND_1_o_LessThan_20_o> created at line 216
+    Found 8-bit comparator greater for signal <pulse_width[15]_GND_1_o_LessThan_21_o> created at line 220
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  42 D-type flip-flop(s).
-	inferred   4 Comparator(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   5 Comparator(s).
 	inferred  13 Multiplexer(s).
 Unit <labkit> synthesized.
 
@@ -215,20 +237,6 @@ Synthesizing Unit <dcm_all_v2>.
     Summary:
 	no macro.
 Unit <dcm_all_v2> synthesized.
-
-Synthesizing Unit <debounce>.
-    Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
-        DELAY = 400000
-    Found 1-bit register for signal <new>.
-    Found 1-bit register for signal <clean>.
-    Found 20-bit register for signal <count>.
-    Found 20-bit adder for signal <count[19]_GND_5_o_add_3_OUT> created at line 902.
-    Found 1-bit comparator equal for signal <n0000> created at line 894
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  22 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-Unit <debounce> synthesized.
 
 Synthesizing Unit <vga_general>.
     Related source file is "C:\Users\Yi Hao\Documents\GitHub\FPGAPongGame\labkit_vga_sol_one.v".
@@ -242,14 +250,14 @@ Synthesizing Unit <vga_general>.
         vsize = 767
     Found 10-bit register for signal <vcount>.
     Found 11-bit register for signal <hcount>.
-    Found 12-bit adder for signal <n0033[11:0]> created at line 871.
-    Found 11-bit adder for signal <n0035[10:0]> created at line 872.
-    Found 11-bit comparator greater for signal <hcount[10]_PWR_6_o_LessThan_3_o> created at line 861
-    Found 11-bit comparator greater for signal <PWR_6_o_hcount[10]_LessThan_4_o> created at line 861
-    Found 10-bit comparator greater for signal <vcount[9]_PWR_6_o_LessThan_5_o> created at line 862
-    Found 10-bit comparator greater for signal <PWR_6_o_vcount[9]_LessThan_6_o> created at line 862
-    Found 11-bit comparator lessequal for signal <n0008> created at line 864
-    Found 10-bit comparator lessequal for signal <n0010> created at line 865
+    Found 12-bit adder for signal <n0033[11:0]> created at line 1116.
+    Found 11-bit adder for signal <n0035[10:0]> created at line 1117.
+    Found 11-bit comparator greater for signal <hcount[10]_PWR_5_o_LessThan_3_o> created at line 1106
+    Found 11-bit comparator greater for signal <PWR_5_o_hcount[10]_LessThan_4_o> created at line 1106
+    Found 10-bit comparator greater for signal <vcount[9]_PWR_5_o_LessThan_5_o> created at line 1107
+    Found 10-bit comparator greater for signal <PWR_5_o_vcount[9]_LessThan_6_o> created at line 1107
+    Found 11-bit comparator lessequal for signal <n0008> created at line 1109
+    Found 10-bit comparator lessequal for signal <n0010> created at line 1110
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  21 D-type flip-flop(s).
@@ -266,6 +274,8 @@ Synthesizing Unit <pong_game>.
         MAX_BALL_Y = 32'b00000000000000000000001011101011
         MIN_BALL_Y = 1
         MAX_BALL_X = 32'b00000000000000000000001111101011
+WARNING:Xst:647 - Input <win_rst1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <win_rst2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:653 - Signal <system_reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 2-bit register for signal <vsync_delay>.
     Found 2-bit register for signal <blank_delay>.
@@ -276,24 +286,24 @@ WARNING:Xst:653 - Signal <system_reset> is used but never assigned. This sourcel
     Found 1-bit register for signal <ball_up>.
     Found 1-bit register for signal <ball_right>.
     Found 2-bit register for signal <hsync_delay>.
-    Found 11-bit subtractor for signal <ball_x[10]_GND_7_o_sub_11_OUT> created at line 456.
-    Found 10-bit subtractor for signal <ball_y[9]_GND_7_o_sub_13_OUT> created at line 457.
-    Found 11-bit adder for signal <ball_x[10]_GND_7_o_add_9_OUT> created at line 456.
-    Found 10-bit adder for signal <ball_y[9]_GND_7_o_add_13_OUT> created at line 457.
-    Found 10-bit adder for signal <ball_y[9]_GND_7_o_add_15_OUT> created at line 458.
-    Found 11-bit adder for signal <n0113> created at line 459.
-    Found 11-bit adder for signal <n0115> created at line 461.
-    Found 12-bit adder for signal <n0116> created at line 464.
-    Found 10-bit comparator lessequal for signal <n0020> created at line 458
-    Found 11-bit comparator greater for signal <GND_7_o_BUS_0004_LessThan_19_o> created at line 459
-    Found 10-bit comparator lessequal for signal <n0025> created at line 460
-    Found 11-bit comparator greater for signal <GND_7_o_BUS_0006_LessThan_23_o> created at line 461
-    Found 12-bit comparator greater for signal <GND_7_o_BUS_0007_LessThan_25_o> created at line 464
-    Found 12-bit comparator greater for signal <BUS_0008_GND_7_o_LessThan_27_o> created at line 464
-    Found 10-bit comparator greater for signal <new_ball_y[9]_GND_7_o_LessThan_29_o> created at line 513
-    Found 10-bit comparator greater for signal <PWR_7_o_new_ball_y[9]_LessThan_30_o> created at line 513
-    Found 11-bit comparator greater for signal <new_ball_x[10]_GND_7_o_LessThan_34_o> created at line 531
-    Found 11-bit comparator greater for signal <GND_7_o_new_ball_x[10]_LessThan_36_o> created at line 535
+    Found 11-bit subtractor for signal <ball_x[10]_GND_6_o_sub_11_OUT> created at line 693.
+    Found 10-bit subtractor for signal <ball_y[9]_GND_6_o_sub_13_OUT> created at line 694.
+    Found 11-bit adder for signal <ball_x[10]_GND_6_o_add_9_OUT> created at line 693.
+    Found 10-bit adder for signal <ball_y[9]_GND_6_o_add_13_OUT> created at line 694.
+    Found 10-bit adder for signal <ball_y[9]_GND_6_o_add_15_OUT> created at line 695.
+    Found 11-bit adder for signal <n0113> created at line 696.
+    Found 11-bit adder for signal <n0115> created at line 698.
+    Found 12-bit adder for signal <n0116> created at line 701.
+    Found 10-bit comparator lessequal for signal <n0020> created at line 695
+    Found 11-bit comparator greater for signal <GND_6_o_BUS_0004_LessThan_19_o> created at line 696
+    Found 10-bit comparator lessequal for signal <n0025> created at line 697
+    Found 11-bit comparator greater for signal <GND_6_o_BUS_0006_LessThan_23_o> created at line 698
+    Found 12-bit comparator greater for signal <GND_6_o_BUS_0007_LessThan_25_o> created at line 701
+    Found 12-bit comparator greater for signal <BUS_0008_GND_6_o_LessThan_27_o> created at line 701
+    Found 10-bit comparator greater for signal <new_ball_y[9]_GND_6_o_LessThan_29_o> created at line 758
+    Found 10-bit comparator greater for signal <PWR_6_o_new_ball_y[9]_LessThan_30_o> created at line 758
+    Found 11-bit comparator greater for signal <new_ball_x[10]_GND_6_o_LessThan_34_o> created at line 776
+    Found 11-bit comparator greater for signal <GND_6_o_new_ball_x[10]_LessThan_36_o> created at line 780
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred  46 D-type flip-flop(s).
@@ -307,16 +317,16 @@ Synthesizing Unit <draw_box1>.
         HEIGHT = 256
         COLOR = 8'b11100000
 WARNING:Xst:647 - Input <pixel_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 11-bit adder for signal <n0038> created at line 583.
-    Found 11-bit adder for signal <n0042> created at line 583.
-    Found 11-bit comparator lessequal for signal <n0000> created at line 583
-    Found 12-bit comparator greater for signal <GND_8_o_BUS_0001_LessThan_3_o> created at line 583
-    Found 10-bit comparator lessequal for signal <n0005> created at line 583
-    Found 11-bit comparator greater for signal <GND_8_o_BUS_0002_LessThan_6_o> created at line 583
-    Found 11-bit comparator lessequal for signal <n0011> created at line 583
-    Found 12-bit comparator greater for signal <GND_8_o_BUS_0003_LessThan_9_o> created at line 583
-    Found 10-bit comparator lessequal for signal <n0016> created at line 583
-    Found 11-bit comparator greater for signal <GND_8_o_BUS_0004_LessThan_12_o> created at line 583
+    Found 11-bit adder for signal <n0038> created at line 828.
+    Found 11-bit adder for signal <n0042> created at line 828.
+    Found 11-bit comparator lessequal for signal <n0000> created at line 828
+    Found 12-bit comparator greater for signal <GND_7_o_BUS_0001_LessThan_3_o> created at line 828
+    Found 10-bit comparator lessequal for signal <n0005> created at line 828
+    Found 11-bit comparator greater for signal <GND_7_o_BUS_0002_LessThan_6_o> created at line 828
+    Found 11-bit comparator lessequal for signal <n0011> created at line 828
+    Found 12-bit comparator greater for signal <GND_7_o_BUS_0003_LessThan_9_o> created at line 828
+    Found 10-bit comparator lessequal for signal <n0016> created at line 828
+    Found 11-bit comparator greater for signal <GND_7_o_BUS_0004_LessThan_12_o> created at line 828
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   8 Comparator(s).
@@ -329,16 +339,16 @@ Synthesizing Unit <move_paddle>.
         PADDLEHEIGHT = 128
     Found 10-bit register for signal <paddle_yB>.
     Found 10-bit register for signal <paddle_yA>.
-    Found 10-bit adder for signal <paddle_yA[9]_GND_9_o_add_3_OUT> created at line 635.
-    Found 11-bit adder for signal <n0047> created at line 642.
-    Found 10-bit adder for signal <paddle_yB[9]_GND_9_o_add_12_OUT> created at line 649.
-    Found 11-bit adder for signal <n0049> created at line 656.
-    Found 10-bit subtractor for signal <GND_9_o_GND_9_o_sub_2_OUT<9:0>> created at line 632.
-    Found 10-bit subtractor for signal <GND_9_o_GND_9_o_sub_11_OUT<9:0>> created at line 646.
-    Found 10-bit comparator greater for signal <paddle_yA[9]_GND_9_o_LessThan_6_o> created at line 638
-    Found 11-bit comparator greater for signal <GND_9_o_BUS_0002_LessThan_9_o> created at line 642
-    Found 10-bit comparator greater for signal <paddle_yB[9]_GND_9_o_LessThan_15_o> created at line 652
-    Found 11-bit comparator greater for signal <GND_9_o_BUS_0004_LessThan_18_o> created at line 656
+    Found 10-bit adder for signal <paddle_yA[9]_GND_8_o_add_3_OUT> created at line 880.
+    Found 11-bit adder for signal <n0047> created at line 887.
+    Found 10-bit adder for signal <paddle_yB[9]_GND_8_o_add_12_OUT> created at line 894.
+    Found 11-bit adder for signal <n0049> created at line 901.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_2_OUT<9:0>> created at line 877.
+    Found 10-bit subtractor for signal <GND_8_o_GND_8_o_sub_11_OUT<9:0>> created at line 891.
+    Found 10-bit comparator greater for signal <paddle_yA[9]_GND_8_o_LessThan_6_o> created at line 883
+    Found 11-bit comparator greater for signal <GND_8_o_BUS_0002_LessThan_9_o> created at line 887
+    Found 10-bit comparator greater for signal <paddle_yB[9]_GND_8_o_LessThan_15_o> created at line 897
+    Found 11-bit comparator greater for signal <GND_8_o_BUS_0004_LessThan_18_o> created at line 901
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
@@ -353,17 +363,17 @@ WARNING:Xst:647 - Input <ball_size<7:7>> is never used. This port will be preser
     Found 20-bit register for signal <y1square>.
     Found 8-bit register for signal <rpixel>.
     Found 22-bit register for signal <x1square>.
-    Found 11-bit subtractor for signal <hcount[10]_rx[10]_sub_4_OUT> created at line 760.
-    Found 11-bit subtractor for signal <rx[10]_hcount[10]_sub_5_OUT> created at line 760.
-    Found 10-bit subtractor for signal <vcount[9]_ry[9]_sub_8_OUT> created at line 761.
-    Found 10-bit subtractor for signal <ry[9]_vcount[9]_sub_9_OUT> created at line 761.
-    Found 22-bit adder for signal <x1square[21]_GND_10_o_add_16_OUT> created at line 778.
-    Found 8x8-bit multiplier for signal <rsquare<15:0>> created at line 759.
-    Found 11x11-bit multiplier for signal <x1[10]_x1[10]_MuLt_11_OUT> created at line 771.
-    Found 10x10-bit multiplier for signal <y1[9]_y1[9]_MuLt_12_OUT> created at line 772.
-    Found 11-bit comparator greater for signal <rx[10]_hcount[10]_LessThan_3_o> created at line 760
-    Found 10-bit comparator greater for signal <ry[9]_vcount[9]_LessThan_7_o> created at line 761
-    Found 22-bit comparator greater for signal <n0016> created at line 778
+    Found 11-bit subtractor for signal <hcount[10]_rx[10]_sub_4_OUT> created at line 1005.
+    Found 11-bit subtractor for signal <rx[10]_hcount[10]_sub_5_OUT> created at line 1005.
+    Found 10-bit subtractor for signal <vcount[9]_ry[9]_sub_8_OUT> created at line 1006.
+    Found 10-bit subtractor for signal <ry[9]_vcount[9]_sub_9_OUT> created at line 1006.
+    Found 22-bit adder for signal <x1square[21]_GND_9_o_add_16_OUT> created at line 1023.
+    Found 8x8-bit multiplier for signal <rsquare<15:0>> created at line 1004.
+    Found 11x11-bit multiplier for signal <x1[10]_x1[10]_MuLt_11_OUT> created at line 1016.
+    Found 10x10-bit multiplier for signal <y1[9]_y1[9]_MuLt_12_OUT> created at line 1017.
+    Found 11-bit comparator greater for signal <rx[10]_hcount[10]_LessThan_3_o> created at line 1005
+    Found 10-bit comparator greater for signal <ry[9]_vcount[9]_LessThan_7_o> created at line 1006
+    Found 22-bit comparator greater for signal <n0016> created at line 1023
     Summary:
 	inferred   3 Multiplier(s).
 	inferred   3 Adder/Subtractor(s).
@@ -377,9 +387,9 @@ Synthesizing Unit <display_4hex>.
     Found 7-bit register for signal <seg>.
     Found 4-bit register for signal <strobe>.
     Found 14-bit register for signal <counter>.
-    Found 14-bit adder for signal <counter[13]_GND_14_o_add_17_OUT> created at line 943.
+    Found 14-bit adder for signal <counter[13]_GND_14_o_add_17_OUT> created at line 1188.
     Found 4x4-bit Read Only RAM for signal <counter[13]_PWR_13_o_wide_mux_23_OUT>
-    Found 7-bit 4-to-1 multiplexer for signal <counter[13]_data[3]_wide_mux_22_OUT> created at line 944.
+    Found 7-bit 4-to-1 multiplexer for signal <counter[13]_data[3]_wide_mux_22_OUT> created at line 1189.
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Adder/Subtractor(s).
@@ -431,11 +441,11 @@ Synthesizing Unit <Sonar>.
     Found 1-bit register for signal <data<1>>.
     Found 1-bit register for signal <data<0>>.
     Found 5-bit register for signal <pulse_old>.
-    Found 40-bit adder for signal <pulse_count[0][39]_GND_15_o_add_3_OUT> created at line 300.
-    Found 40-bit adder for signal <pulse_count[1][39]_GND_15_o_add_7_OUT> created at line 300.
-    Found 40-bit adder for signal <pulse_count[2][39]_GND_15_o_add_11_OUT> created at line 300.
-    Found 40-bit adder for signal <pulse_count[3][39]_GND_15_o_add_15_OUT> created at line 300.
-    Found 40-bit adder for signal <pulse_count[4][39]_GND_15_o_add_19_OUT> created at line 300.
+    Found 40-bit adder for signal <pulse_count[0][39]_GND_15_o_add_3_OUT> created at line 341.
+    Found 40-bit adder for signal <pulse_count[1][39]_GND_15_o_add_7_OUT> created at line 341.
+    Found 40-bit adder for signal <pulse_count[2][39]_GND_15_o_add_11_OUT> created at line 341.
+    Found 40-bit adder for signal <pulse_count[3][39]_GND_15_o_add_15_OUT> created at line 341.
+    Found 40-bit adder for signal <pulse_count[4][39]_GND_15_o_add_19_OUT> created at line 341.
     Summary:
 	inferred   5 Adder/Subtractor(s).
 	inferred 245 D-type flip-flop(s).
@@ -452,7 +462,7 @@ Macro Statistics
  10x10-bit multiplier                                  : 1
  11x11-bit multiplier                                  : 1
  8x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 25
+# Adders/Subtractors                                   : 24
  10-bit adder                                          : 1
  10-bit addsub                                         : 3
  10-bit subtractor                                     : 1
@@ -461,18 +471,17 @@ Macro Statistics
  11-bit subtractor                                     : 1
  12-bit adder                                          : 2
  14-bit adder                                          : 1
- 20-bit adder                                          : 1
  22-bit adder                                          : 1
  27-bit adder                                          : 1
  40-bit adder                                          : 5
-# Registers                                            : 74
- 1-bit register                                        : 53
+# Registers                                            : 72
+ 1-bit register                                        : 52
  10-bit register                                       : 4
  11-bit register                                       : 2
  14-bit register                                       : 1
  16-bit register                                       : 1
  2-bit register                                        : 3
- 20-bit register                                       : 2
+ 20-bit register                                       : 1
  200-bit register                                      : 1
  22-bit register                                       : 1
  26-bit register                                       : 1
@@ -481,14 +490,13 @@ Macro Statistics
  7-bit register                                        : 1
  8-bit register                                        : 2
 # Comparators                                          : 36
- 1-bit comparator equal                                : 1
  10-bit comparator greater                             : 7
  10-bit comparator lessequal                           : 5
  11-bit comparator greater                             : 11
  11-bit comparator lessequal                           : 3
  12-bit comparator greater                             : 4
  22-bit comparator greater                             : 1
- 8-bit comparator greater                              : 4
+ 8-bit comparator greater                              : 5
 # Multiplexers                                         : 424
  1-bit 2-to-1 multiplexer                              : 409
  10-bit 2-to-1 multiplexer                             : 6
@@ -518,10 +526,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_10
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_11> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <paddle_pix_delay_12> (without init value) has a constant value of 0 in block <psolution>. This FF/Latch will be trimmed during the optimization process.
 
-Synthesizing (advanced) Unit <debounce>.
-The following registers are absorbed into counter <count>: 1 register on signal <count>.
-Unit <debounce> synthesized (advanced).
-
 Synthesizing (advanced) Unit <display_4hex>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
 INFO:Xst:3231 - The small RAM <Mram_counter[13]_PWR_13_o_wide_mux_23_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -542,7 +546,7 @@ The following registers are absorbed into counter <counter3>: 1 register on sign
 Unit <labkit> synthesized (advanced).
 
 Synthesizing (advanced) Unit <round_piped>.
-	Multiplier <Mmult_x1[10]_x1[10]_MuLt_11_OUT> in block <round_piped> and adder/subtractor <Madd_x1square[21]_GND_10_o_add_16_OUT> in block <round_piped> are combined into a MAC<Maddsub_x1[10]_x1[10]_MuLt_11_OUT>.
+	Multiplier <Mmult_x1[10]_x1[10]_MuLt_11_OUT> in block <round_piped> and adder/subtractor <Madd_x1square[21]_GND_9_o_add_16_OUT> in block <round_piped> are combined into a MAC<Maddsub_x1[10]_x1[10]_MuLt_11_OUT>.
 	The following registers are also absorbed by the MAC: <x1square> in block <round_piped>.
 	Found pipelined multiplier on signal <y1[9]_y1[9]_MuLt_12_OUT>:
 		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
@@ -575,23 +579,21 @@ Macro Statistics
  11-bit subtractor                                     : 1
  12-bit adder                                          : 1
  40-bit adder                                          : 5
-# Counters                                             : 5
+# Counters                                             : 4
  10-bit up counter                                     : 1
  11-bit up counter                                     : 1
  14-bit up counter                                     : 1
- 20-bit up counter                                     : 1
  26-bit up counter                                     : 1
-# Registers                                            : 348
- Flip-Flops                                            : 348
+# Registers                                            : 347
+ Flip-Flops                                            : 347
 # Comparators                                          : 36
- 1-bit comparator equal                                : 1
  10-bit comparator greater                             : 7
  10-bit comparator lessequal                           : 5
  11-bit comparator greater                             : 11
  11-bit comparator lessequal                           : 3
  12-bit comparator greater                             : 4
  22-bit comparator greater                             : 1
- 8-bit comparator greater                              : 4
+ 8-bit comparator greater                              : 5
 # Multiplexers                                         : 424
  1-bit 2-to-1 multiplexer                              : 409
  10-bit 2-to-1 multiplexer                             : 6
@@ -732,8 +734,6 @@ INFO:Xst:1901 - Instance my_clocks/DCM_inst in unit labkit of type DCM has been 
 
 Optimizing unit <labkit> ...
 
-Optimizing unit <debounce> ...
-
 Optimizing unit <pong_game> ...
 
 Optimizing unit <draw_box1> ...
@@ -761,46 +761,18 @@ WARNING:Xst:2677 - Node <Sonar1/data_8> of sequential type is unconnected in blo
 WARNING:Xst:2677 - Node <Sonar1/data_9> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_10> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_11> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_12> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_13> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_16> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_17> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_18> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_19> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_20> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_22> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_23> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_21> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_24> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_25> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_26> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_27> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_29> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_28> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_32> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_33> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_34> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_36> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/data_37> of sequential type is unconnected in block <labkit>.
 WARNING:Xst:2677 - Node <Sonar1/data_35> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_95> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_94> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_93> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_92> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_91> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_90> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_89> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_88> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_87> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_86> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_85> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_84> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_83> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_82> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_81> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_count_0_80> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:2677 - Node <Sonar1/pulse_old_2> of sequential type is unconnected in block <labkit>.
-WARNING:Xst:1710 - FF/Latch <db_enter/count_19> (without init value) has a constant value of 0 in block <labkit>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <psolution/paddle_pix_delay_7> in Unit <labkit> is equivalent to the following 2 FFs/Latches, which will be removed : <psolution/paddle_pix_delay_6> <psolution/paddle_pix_delay_5> 
 INFO:Xst:2261 - The FF/Latch <psolution/ball_x_1> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <psolution/ball_x_0> 
 INFO:Xst:2261 - The FF/Latch <psolution/ball_y_1> in Unit <labkit> is equivalent to the following FF/Latch, which will be removed : <psolution/ball_up> 
@@ -830,8 +802,8 @@ Unit <labkit> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 229
- Flip-Flops                                            : 229
+# Registers                                            : 236
+ Flip-Flops                                            : 236
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -856,24 +828,24 @@ Top Level Output File Name         : labkit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 949
+# BELS                             : 952
 #      GND                         : 1
 #      INV                         : 12
-#      LUT1                        : 136
-#      LUT2                        : 64
-#      LUT3                        : 95
-#      LUT4                        : 127
+#      LUT1                        : 133
+#      LUT2                        : 60
+#      LUT3                        : 111
+#      LUT4                        : 131
 #      LUT5                        : 47
-#      LUT6                        : 64
-#      MUXCY                       : 221
+#      LUT6                        : 60
+#      MUXCY                       : 218
 #      MUXF7                       : 2
 #      VCC                         : 1
-#      XORCY                       : 179
-# FlipFlops/Latches                : 230
-#      FD                          : 114
-#      FDE                         : 18
+#      XORCY                       : 176
+# FlipFlops/Latches                : 237
+#      FD                          : 132
+#      FDE                         : 26
 #      FDR                         : 37
-#      FDRE                        : 40
+#      FDRE                        : 21
 #      FDS                         : 1
 #      FDSE                        : 20
 # Shift Registers                  : 1
@@ -896,18 +868,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             230  out of  18224     1%  
- Number of Slice LUTs:                  546  out of   9112     5%  
-    Number used as Logic:               545  out of   9112     5%  
+ Number of Slice Registers:             237  out of  18224     1%  
+ Number of Slice LUTs:                  555  out of   9112     6%  
+    Number used as Logic:               554  out of   9112     6%  
     Number used as Memory:                1  out of   2176     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    588
-   Number with an unused Flip Flop:     358  out of    588    60%  
-   Number with an unused LUT:            42  out of    588     7%  
-   Number of fully used LUT-FF pairs:   188  out of    588    31%  
-   Number of unique control sets:        18
+ Number of LUT Flip Flop pairs used:    605
+   Number with an unused Flip Flop:     368  out of    605    60%  
+   Number with an unused LUT:            50  out of    605     8%  
+   Number of fully used LUT-FF pairs:   187  out of    605    30%  
+   Number of unique control sets:        16
 
 IO Utilization: 
  Number of IOs:                         116
@@ -939,8 +911,8 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 clk_100mhz                         | IBUFG+BUFG             | 27    |
-clk_100mhz                         | DCM_SP:CLKFX           | 124   |
-SonarClk                           | BUFG                   | 82    |
+clk_100mhz                         | DCM_SP:CLKFX           | 104   |
+SonarClk                           | BUFG                   | 109   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -963,7 +935,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_100mhz'
   Clock period: 4.961ns (frequency: 201.574MHz)
-  Total number of paths / destination ports: 21274 / 347
+  Total number of paths / destination ports: 20682 / 287
 -------------------------------------------------------------------------
 Delay:               7.632ns (Levels of Logic = 16)
   Source:            psolution/ball_y_2 (FF)
@@ -1000,7 +972,7 @@ Delay:               7.632ns (Levels of Logic = 16)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SonarClk'
   Clock period: 2.905ns (frequency: 344.193MHz)
-  Total number of paths / destination ports: 636 / 92
+  Total number of paths / destination ports: 808 / 128
 -------------------------------------------------------------------------
 Delay:               2.905ns (Levels of Logic = 1)
   Source:            Sonar1/pulse_old_0 (FF)
@@ -1021,7 +993,7 @@ Delay:               2.905ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100mhz'
-  Total number of paths / destination ports: 435 / 50
+  Total number of paths / destination ports: 413 / 28
 -------------------------------------------------------------------------
 Offset:              6.328ns (Levels of Logic = 9)
   Source:            switch<6> (PAD)
@@ -1039,7 +1011,7 @@ Offset:              6.328ns (Levels of Logic = 9)
      XORCY:CI->O           5   0.180   0.819  psolution/Maddsub_new_ball_x_xor<4> (psolution/new_ball_x<4>)
      LUT2:I0->O            1   0.203   0.580  psolution/_n01401_SW0 (N17)
      LUT6:I5->O            4   0.205   0.912  psolution/_n01401 (psolution/_n01401)
-     LUT6:I3->O            1   0.205   0.580  psolution/Mmux_new_ball_x[10]_GND_7_o_mux_36_OUT41 (psolution/new_ball_x[10]_GND_7_o_mux_36_OUT<2>)
+     LUT6:I3->O            1   0.205   0.580  psolution/Mmux_new_ball_x[10]_GND_6_o_mux_36_OUT41 (psolution/new_ball_x[10]_GND_6_o_mux_36_OUT<2>)
      LUT4:I3->O            1   0.205   0.000  psolution/ball_x_2_glue_rst (psolution/ball_x_2_glue_rst)
      FD:D                      0.102          psolution/ball_x_2
     ----------------------------------------
@@ -1048,7 +1020,7 @@ Offset:              6.328ns (Levels of Logic = 9)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SonarClk'
-  Total number of paths / destination ports: 82 / 82
+  Total number of paths / destination ports: 109 / 109
 -------------------------------------------------------------------------
 Offset:              3.600ns (Levels of Logic = 2)
   Source:            jc<0> (PAD)
@@ -1080,8 +1052,8 @@ Offset:              4.627ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               3   0.447   0.755  b (b)
-     LUT2:I0->O            3   0.203   0.650  Mmux_vgared31 (vgared_0_OBUF)
-     OBUF:I->O                 2.571          vgared_0_OBUF (vgared<0>)
+     LUT2:I0->O            3   0.203   0.650  Mmux_vgagreen31 (vgagreen_0_OBUF)
+     OBUF:I->O                 2.571          vgagreen_0_OBUF (vgagreen<0>)
     ----------------------------------------
     Total                      4.627ns (3.221ns logic, 1.405ns route)
                                        (69.6% logic, 30.4% route)
@@ -1129,14 +1101,14 @@ clk_100mhz     |    7.632|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 24.84 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 24.50 secs
  
 --> 
 
-Total memory usage is 234004 kilobytes
+Total memory usage is 250068 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  218 (   0 filtered)
-Number of infos    :   23 (   0 filtered)
+Number of warnings :  207 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
 

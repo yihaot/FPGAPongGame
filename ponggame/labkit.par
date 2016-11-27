@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-CB68LJV::  Mon Nov 28 04:39:06 2016
+DESKTOP-CB68LJV::  Mon Nov 28 07:01:02 2016
 
 par -w -intstyle ise -ol high -mt off labkit_map.ncd labkit.ncd labkit.pcf 
 
@@ -26,16 +26,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   230 out of  18,224    1%
-    Number used as Flip Flops:                 230
+  Number of Slice Registers:                   237 out of  18,224    1%
+    Number used as Flip Flops:                 237
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        430 out of   9,112    4%
-    Number used as logic:                      420 out of   9,112    4%
+  Number of Slice LUTs:                        433 out of   9,112    4%
+    Number used as logic:                      423 out of   9,112    4%
       Number using O6 output only:             166
-      Number using O5 output only:             126
-      Number using O5 and O6:                  128
+      Number using O5 output only:             123
+      Number using O5 and O6:                  134
       Number used as ROM:                        0
     Number used as Memory:                       1 out of   2,176    1%
       Number used as Dual Port RAM:              0
@@ -50,12 +50,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   150 out of   2,278    6%
-  Number of MUXCYs used:                       256 out of   4,556    5%
-  Number of LUT Flip Flop pairs used:          446
-    Number with an unused Flip Flop:           254 out of     446   56%
-    Number with an unused LUT:                  16 out of     446    3%
-    Number of fully used LUT-FF pairs:         176 out of     446   39%
+  Number of occupied Slices:                   139 out of   2,278    6%
+  Number of MUXCYs used:                       252 out of   4,556    5%
+  Number of LUT Flip Flop pairs used:          460
+    Number with an unused Flip Flop:           267 out of     460   58%
+    Number with an unused LUT:                  27 out of     460    5%
+    Number of fully used LUT-FF pairs:         166 out of     460   36%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -122,7 +122,6 @@ WARNING:Par:288 - The signal ja<7>_IBUF has no load.  PAR will not attempt to ro
 WARNING:Par:288 - The signal jb<4>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal jb<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal jb<6>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal jc<2>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal jb<7>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal jd<0>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal jd<1>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -135,6 +134,7 @@ WARNING:Par:288 - The signal jd<4>_IBUF has no load.  PAR will not attempt to ro
 WARNING:Par:288 - The signal jd<5>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal jd<6>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal jd<7>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal btn_enter_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal btn_right_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal btn_left_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal btn_down_IBUF has no load.  PAR will not attempt to route this signal.
@@ -182,13 +182,13 @@ WARNING:Par:288 - The signal exp_io_p<9>_IBUF has no load.  PAR will not attempt
 Starting Router
 
 
-Phase  1  : 2152 unrouted;      REAL time: 12 secs 
+Phase  1  : 2154 unrouted;      REAL time: 12 secs 
 
-Phase  2  : 1612 unrouted;      REAL time: 14 secs 
+Phase  2  : 1617 unrouted;      REAL time: 14 secs 
 
-Phase  3  : 539 unrouted;      REAL time: 16 secs 
+Phase  3  : 517 unrouted;      REAL time: 16 secs 
 
-Phase  4  : 539 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  4  : 517 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
 
 Updating file: labkit.ncd with current fully routed design.
 
@@ -202,8 +202,8 @@ Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 2
 
 Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
-Total REAL time to Router completion: 20 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Total REAL time to Router completion: 21 secs 
 Total CPU time to Router completion: 20 secs 
 
 Partition Implementation Status
@@ -224,14 +224,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|   223.068ns|     N/A|           0
-  _65mhz_BUFG                               | HOLD        |     0.388ns|            |       0|           0
+  Autotimespec constraint for clock net Son | SETUP       |         N/A|     3.259ns|     N/A|           0
+  arClk_BUFG                                | HOLD        |     0.564ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net Son | SETUP       |         N/A|     3.243ns|     N/A|           0
-  arClk_BUFG                                | HOLD        |     0.566ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|   223.648ns|     N/A|           0
+  _65mhz_BUFG                               | HOLD        |     0.393ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     3.254ns|     N/A|           0
-  _100mhz_IBUFG_BUFG                        | HOLD        |     0.438ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     3.200ns|     N/A|           0
+  _100mhz_IBUFG_BUFG                        | HOLD        |     0.456ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -252,7 +252,7 @@ WARNING:Par:283 - There are 72 loadless signals in this design. This design will
 Total REAL time to PAR completion: 22 secs 
 Total CPU time to PAR completion: 22 secs 
 
-Peak Memory Usage:  279 MB
+Peak Memory Usage:  267 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
