@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Nov 28 07:00:29 2016
+Mapped Date    : Mon Nov 28 15:12:58 2016
 
 Mapping design into LUTs...
 Running directed packing...
@@ -23,7 +23,7 @@ Total REAL time at the beginning of Placer: 14 secs
 Total CPU  time at the beginning of Placer: 14 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:ea468425) REAL time: 15 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ea468425) REAL time: 16 secs 
 
 Phase 2.7  Design Feasibility Check
 Phase 2.7  Design Feasibility Check (Checksum:ea468425) REAL time: 16 secs 
@@ -59,7 +59,7 @@ Phase 10.5  Local Placement Optimization
 Phase 10.5  Local Placement Optimization (Checksum:aa85f295) REAL time: 24 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:aa16e962) REAL time: 26 secs 
+Phase 11.18  Placement Optimization (Checksum:aa16e962) REAL time: 25 secs 
 
 Phase 12.5  Local Placement Optimization
 Phase 12.5  Local Placement Optimization (Checksum:aa16e962) REAL time: 26 secs 
@@ -156,9 +156,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.62
 
-Peak Memory Usage:  296 MB
+Peak Memory Usage:  305 MB
 Total REAL time to MAP completion:  28 secs 
-Total CPU time to MAP completion:   28 secs 
+Total CPU time to MAP completion:   27 secs 
 
 Mapping completed.
 See MAP report file "labkit_map.mrp" for details.

@@ -209,3 +209,9 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off labkit_map.ncd labkit.ncd labkit.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml labkit.twx labkit.ncd -o labkit.twr labkit.pcf 
 bitgen -intstyle ise -f labkit.ut labkit.ncd 
+xst -intstyle ise -ifn "C:/Users/Yi Hao/Documents/GitHub/FPGAPongGame/ponggame/labkit.xst" -ofn "C:/Users/Yi Hao/Documents/GitHub/FPGAPongGame/ponggame/labkit.syr" 
+ngdbuild -intstyle ise -dd _ngo -aul -nt timestamp -uc "C:/Users/Yi Hao/Documents/GitHub/FPGAPongGame/labkit_nexys3(4).ucf" -p xc6slx16-csg324-3 "labkit.ngc" labkit.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o labkit_map.ncd labkit.ngd labkit.pcf 
+par -w -intstyle ise -ol high -mt off labkit_map.ncd labkit.ncd labkit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml labkit.twx labkit.ncd -o labkit.twr labkit.pcf 
+bitgen -intstyle ise -f labkit.ut labkit.ncd 
