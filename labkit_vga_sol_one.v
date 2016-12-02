@@ -165,7 +165,7 @@ reg [9:0]	 x_two = 570;
 //reg win_rst1;
 //reg win_rst2;
 //for score//
-draw_score score1(
+drawScore score1(
 			 .win_rst(win_rst1),
 			 .hcount(hcount),
 			 .vcount(vcount),
@@ -176,7 +176,7 @@ draw_score score1(
 			 .over(over) //unknown
 		);
 
-draw_score score2(
+drawScore score2(
 			 .win_rst(win_rst2),
 			 .hcount(hcount),
 			 .vcount(vcount),
@@ -201,23 +201,23 @@ reg resettrack = 0;
 
 
 always @(posedge pixel_clk) begin
-if ((pulse_width[31:24]) < 8'b00010000) //01000000
+if ((pulseWidth[31:24]) < 8'b00010000) //01000000
 uptrack <= 1;
 else
 uptrack <= 0;
-if ((pulse_width[39:32]) < 8'b00010000)
+if ((pulseWidth[39:32]) < 8'b00010000)
 downtrack <= 1;
 else
 downtrack <= 0;
-if ((pulse_width[7:0]) < 8'b00010000)
+if ((pulseWidth[7:0]) < 8'b00010000)
 lefttrack <= 1;
 else
 lefttrack <= 0;
-if ((pulse_width[23:16]) < 8'b00010000)
+if ((pulseWidth[23:16]) < 8'b00010000)
 righttrack <= 1;
 else
 righttrack <= 0;
- if ((pulse_width[15:8]) < 8'b00010000)
+ if ((pulseWidth[15:8]) < 8'b00010000)
 resettrack <= 1;
 else
 resettrack <= 0;
@@ -242,7 +242,7 @@ assign enter = resettrack;
 
 	display_4hex  my_display(
 	  .clk(pixel_clk),
-	  .data((pulse_width[7:0])),
+	  .data((pulseWidth[7:0])),
      //.data(counter[30:15]),
 	  .seg(seg[6:0]),
      .strobe(dig)
@@ -303,65 +303,65 @@ assign enter = resettrack;
 
 
 ///testing new sonar///
-reg SonarClk;
-reg [25:0] counter3;
-wire [39:0] pulse_width;
+reg sonarClock;
+reg [25:0] sonarCounter;
+wire [39:0] pulseWidth;
 always@(posedge clk_100mhz) begin
-	  counter3 <= (counter3 == (20-1)) ? 0 : counter3 + 1;
-	  SonarClk <= (counter3 == (20-1)) ? !SonarClk : SonarClk;
+	  sonarCounter <= (sonarCounter == (20-1)) ? 0 : sonarCounter + 1;
+	  sonarClock <= (sonarCounter == (20-1)) ? !sonarClock : sonarClock;
 	end
-Sonar Sonar1(.clock(SonarClk), .pulse(jc[4:0]), .data(pulse_width));
+Sonar Sonar1(.clock(sonarClock), .pulse(jc[4:0]), .data(pulseWidth));
 
-wire [7:0] Unpacked[4:0] = {(pulse_width[7:0]),(pulse_width[15:8]),(pulse_width[23:16]),(pulse_width[31:24]),(pulse_width[39:32])};
+wire [7:0] megaPulseBit[4:0] = {(pulseWidth[7:0]),(pulseWidth[15:8]),(pulseWidth[23:16]),(pulseWidth[31:24]),(pulseWidth[39:32])};
 //reg distance;
-//assign distance = Unpacked[0];
+//assign distance = megaPulseBit[0];
 
 
-//(pulse_width[7:0]) see this value
+//(pulseWidth[7:0]) see this value
 endmodule
 
 module Sonar(input clock, input [4:0]pulse, output reg [39:0] data);
 
-	reg [39:0] pulse_count[4:0];
-	reg pulse_state[4:0];
-	reg pulse_old[4:0];
-	reg [2:0]i;
+	reg [39:0] pulseCount[4:0];
+	reg pulseState[4:0];
+	reg prevPulse[4:0];
+	reg [2:0]k;
 
 	always @ (posedge clock)
 		begin
-		for(i = 0; i < 5; i=i+1)begin
-			if(pulse[i] == 1)
+		for(k = 0; k < 5; k=k+1)begin
+			if(pulse[k] == 1)
 				begin
-					if(pulse_old[i] == 0)
+					if(prevPulse[k] == 0)
 						begin
-							pulse_state[i] = 0;
-							pulse_count[i] = 0;
+							pulseState[k] = 0;
+							pulseCount[k] = 0;
 						end
 					else
-						pulse_count[i] = pulse_count[i] + 1;
+						pulseCount[k] = pulseCount[k] + 1;
 				end
 			else
 				begin
-					if(pulse_old[i] == 1)
+					if(prevPulse[k] == 1)
 						begin
-							pulse_state[i] = 1;
-							case(i)
-								0	: 	data [7:0] = (pulse_count[i]>>8);
-								1	:	data [15:8] = (pulse_count[i]>>8);
-								2	:	data [23:16] = (pulse_count[i]>>8);
-								3	:	data [31:24] = (pulse_count[i]>>8);
-								4	:	data [39:32] = (pulse_count[i]>>8);
-								default:	data [7:0] = (pulse_count[i]>>8);
+							pulseState[k] = 1;
+							case(k)
+								0	: 	data [7:0] = (pulseCount[k]>>8);
+								1	:	data [15:8] = (pulseCount[k]>>8);
+								2	:	data [23:16] = (pulseCount[k]>>8);
+								3	:	data [31:24] = (pulseCount[k]>>8);
+								4	:	data [39:32] = (pulseCount[k]>>8);
+								default:	data [7:0] = (pulseCount[k]>>8);
 							endcase
-							pulse_count[i] = 0;
+							pulseCount[k] = 0;
 						end
 					else
 						begin
-							pulse_state[i] = 0;
-							pulse_count[i] = 0;
+							pulseState[k] = 0;
+							pulseCount[k] = 0;
 						end
 				end
-			pulse_old[i] = pulse[i];
+			prevPulse[k] = pulse[k];
 			end
 		end
 
@@ -369,7 +369,7 @@ endmodule
 
 
 
-module draw_score #(parameter WIDTH = 10,   // default width: 10 pixels
+module drawScore #(parameter WIDTH = 10,   // default width: 10 pixels
                HEIGHT = 40)(                // default height: 40 pixels  
 		win_rst,
 		hcount,
@@ -381,9 +381,7 @@ module draw_score #(parameter WIDTH = 10,   // default width: 10 pixels
 		over
 );
 
-// ====================================================================================
-// 										Port Declarations
-// ====================================================================================
+
 	input [10:0] hcount;
 	input [9:0]  vcount;
 	input	[9:0]	 x;
@@ -392,19 +390,11 @@ module draw_score #(parameter WIDTH = 10,   // default width: 10 pixels
 	input			 rst;
 	output [7:0] pixel;
 	output		 over;
-
-// ====================================================================================
-// 								Parameters, Register, and Wires
-// ====================================================================================
 	reg [7:0]	 COLOR = 8'b111_000_00;//8'hCF;
 	reg			 over;
 	reg [3:0]	 NUMBER = 0;
 	reg [7:0] 	 pixel;
 	reg [9:0]  	 y = 50;
-
-//  ===================================================================================
-// 							  				Implementation
-//  ===================================================================================
 
 		always @(posedge clk) 
 		begin
